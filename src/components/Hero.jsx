@@ -44,7 +44,7 @@ function Hero() {
       <div className="hero-content">
 
         <p className="hero-subtitle hero-line hero-line-subtitle">
-          {renderWords('THE ENGAGEMENT OF', 'subtitle', 0.2)}
+          {renderWords('THE  ENGAGEMENT  OF', 'subtitle', 0.2)}
         </p>
 
         <h1 className="hero-title hero-line hero-line-title">
