@@ -607,13 +607,13 @@
 
 .wish-form-overlay {
   position:
-    fixed;
+    absolute;
 
   inset:
     0;
 
   z-index:
-    100;
+    5;
 
   display:
     flex;
