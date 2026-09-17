@@ -1,184 +1,1775 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Great+Vibes&display=swap');
+
+
+/* ==================================================
+   GLOBAL
+================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family:
+    'Cormorant Garamond',
+    Georgia,
+    serif;
+
+  background: #ffffff;
+
+  color: var(--text-dark);
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+
+/* ==================================================
+   VARIABLES
+================================================== */
+
+:root {
+  --white: #ffffff;
+
+  --light-lavender: #f3eef5;
+
+  --dusty-purple: #9b8aa6;
+
+  --deep-purple: #74627f;
+
+  --text-dark: #403746;
+
+  --border: #ddd5e2;
+
+  --accent: #9b8aa6;
+
+  --accent-bg: #f3eef5;
+
+  --accent-border: #c9bbd1;
+
+  --social-bg: #f3eef5;
+
+  --text-h: #403746;
+
+  --shadow:
+    0 10px 30px
+    rgba(111, 96, 125, 0.15);
+}
+
+
+/* ==================================================
+   COUNTER
+================================================== */
+
 .counter {
   font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
 
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
+  padding: 5px 10px;
+
+  border-radius: 5px;
+
+  color: var(--accent);
+
+  background:
+    var(--accent-bg);
+
+  border:
+    2px solid transparent;
+
+  transition:
+    border-color 0.3s;
+
+  margin-bottom: 24px;
 }
+
+.counter:hover {
+  border-color:
+    var(--accent-border);
+}
+
+.counter:focus-visible {
+  outline:
+    2px solid var(--accent);
+
+  outline-offset:
+    2px;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
 
 .hero {
   position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
 }
+
+.hero .base,
+.hero .framework,
+.hero .vite {
+  inset-inline: 0;
+
+  margin: 0 auto;
+}
+
+.hero .base {
+  width: 170px;
+
+  position: relative;
+
+  z-index: 0;
+}
+
+.hero .framework,
+.hero .vite {
+  position: absolute;
+}
+
+.hero .framework {
+  z-index: 1;
+
+  top: 34px;
+
+  height: 28px;
+
+  transform:
+    perspective(2000px)
+    rotateZ(300deg)
+    rotateX(44deg)
+    rotateY(39deg)
+    scale(1.4);
+}
+
+.hero .vite {
+  z-index: 0;
+
+  top: 107px;
+
+  height: 26px;
+
+  width: auto;
+
+  transform:
+    perspective(2000px)
+    rotateZ(300deg)
+    rotateX(40deg)
+    rotateY(39deg)
+    scale(0.8);
+}
+
+
+/* ==================================================
+   CENTER
+================================================== */
 
 #center {
   display: flex;
+
   flex-direction: column;
+
   gap: 25px;
+
   place-content: center;
+
   place-items: center;
+
   flex-grow: 1;
 
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
+  padding:
+    32px 20px 24px;
 }
+
+
+/* ==================================================
+   NEXT STEPS
+================================================== */
 
 #next-steps {
   display: flex;
-  border-top: 1px solid var(--border);
+
+  border-top:
+    1px solid var(--border);
+
   text-align: left;
+}
 
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
+#next-steps > div {
+  flex:
+    1 1 0;
 
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
+  padding: 32px;
+}
 
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
+#next-steps .icon {
+  margin-bottom: 16px;
+
+  width: 22px;
+
+  height: 22px;
 }
 
 #docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
+  border-right:
+    1px solid var(--border);
 }
+
+
+/* ==================================================
+   NEXT STEPS LINKS
+================================================== */
 
 #next-steps ul {
   list-style: none;
+
   padding: 0;
+
   display: flex;
+
   gap: 8px;
-  margin: 32px 0 0;
 
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
+  margin:
+    32px 0 0;
 }
+
+#next-steps ul .logo {
+  height: 18px;
+}
+
+#next-steps ul a {
+  color:
+    var(--text-h);
+
+  font-size: 16px;
+
+  border-radius: 6px;
+
+  background:
+    var(--social-bg);
+
+  display: flex;
+
+  padding:
+    6px 12px;
+
+  align-items: center;
+
+  gap: 8px;
+
+  text-decoration: none;
+
+  transition:
+    box-shadow 0.3s;
+}
+
+#next-steps ul a:hover {
+  box-shadow:
+    var(--shadow);
+}
+
+#next-steps ul a .button-icon {
+  height: 18px;
+
+  width: 18px;
+}
+
+
+/* ==================================================
+   SPACER
+================================================== */
 
 #spacer {
   height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
+
+  border-top:
+    1px solid var(--border);
 }
+
+
+/* ==================================================
+   TICKS
+================================================== */
 
 .ticks {
   position: relative;
+
+  width: 100%;
+}
+
+.ticks::before,
+.ticks::after {
+  content: '';
+
+  position: absolute;
+
+  top: -4.5px;
+
+  border:
+    5px solid transparent;
+}
+
+.ticks::before {
+  left: 0;
+
+  border-left-color:
+    var(--border);
+}
+
+.ticks::after {
+  right: 0;
+
+  border-right-color:
+    var(--border);
+}
+
+
+/* ==================================================
+   INVITATION CONTENT
+================================================== */
+
+#invitation-content {
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding:
+    40px 24px;
+}
+
+.placeholder-content h2 {
+  font-size: 2rem;
+
+  font-weight: 400;
+
+  margin-bottom: 16px;
+}
+
+.placeholder-content p {
+  line-height: 1.6;
+}
+
+
+/* ==================================================
+   OUTSIDE BACKGROUND
+================================================== */
+
+.page-background {
+  min-height: 100vh;
+
+  background-color:
+    #ffffff;
+
+  background-size:
+    cover;
+
+  background-position:
+    center;
+
+  background-repeat:
+    no-repeat;
+
+  background-attachment:
+    fixed;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: flex-start;
+}
+
+
+/* ==================================================
+   DIGITAL INVITATION CARD
+================================================== */
+
+.invitation-card {
+  position: relative;
+
   width: 100%;
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
+  max-width: 430px;
+
+  min-height: 0;
+
+  background-color:
+    #ffffff;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 0 35px
+    rgba(0, 0, 0, 0.08);
+}
+
+
+.global-snow-container {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+
+.invitation-card > section {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ==================================================
+   DESKTOP
+================================================== */
+
+@media (min-width: 768px) {
+
+  .page-background {
+    padding:
+      30px 0;
   }
 
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
+  .invitation-card {
+    width: 430px;
+
+    min-height: 0;
+
+    border-radius: 4px;
   }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
+}
+
+
+/* ==================================================
+   LARGE DESKTOP
+================================================== */
+
+@media (min-width: 1200px) {
+
+  .page-background {
+    padding:
+      40px 0;
+  }
+
+  .invitation-card {
+    width: 430px;
+
+    max-width: 430px;
+
+    min-height: 0;
+  }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 767px) {
+
+  .page-background {
+    display: block;
+
+    padding: 0;
+
+    background-attachment:
+      scroll;
+  }
+
+  .invitation-card {
+    width: 100%;
+
+    max-width: 430px;
+
+    margin: 0 auto;
+
+    min-height: 100vh;
+
+    box-shadow: none;
+
+    border-radius: 0;
+  }
+}
+
+
+/* ==================================================
+   OPENING INVITATION SCREEN
+================================================== */
+
+.opening-screen {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  opacity: 1;
+
+  visibility: visible;
+
+  background-color:
+    #f3eef5;
+
+  transition:
+    opacity 1.8s ease,
+    visibility 1.8s ease,
+    transform 2s ease;
+}
+
+
+/* ==================================================
+   WALLPAPER CINEMATIC FADE
+================================================== */
+
+.opening-screen::before {
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    url('./assets/new.png');
+
+  background-size:
+    contain;
+
+  background-position:
+    center center;
+
+  background-repeat:
+    no-repeat;
+
+  opacity: 0;
+
+  transform:
+    scale(1.035);
+
+  filter:
+    blur(8px);
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  animation:
+    wallpaperCinematicReveal
+    5s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+
+/* ==================================================
+   WALLPAPER REVEAL
+================================================== */
+
+@keyframes wallpaperCinematicReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      scale(1.035);
+
+    filter:
+      blur(8px);
+  }
+
+  20% {
+    opacity: 0.08;
+  }
+
+  40% {
+    opacity: 0.28;
+
+    filter:
+      blur(5px);
+  }
+
+  65% {
+    opacity: 0.65;
+
+    filter:
+      blur(2px);
+  }
+
+  85% {
+    opacity: 0.9;
+
+    filter:
+      blur(0.5px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      scale(1);
+
+    filter:
+      blur(0);
+  }
+}
+
+
+/* ==================================================
+   SOFT CINEMATIC LIGHT
+================================================== */
+
+.opening-screen::after {
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(255, 255, 255, 0.30),
+      transparent 60%
+    );
+
+  pointer-events: none;
+
+  z-index: 1;
+
+  animation:
+    softLightMove
+    12s
+    ease-in-out
+    infinite alternate;
+}
+
+
+@keyframes softLightMove {
+
+  0% {
+    opacity: 0.25;
+
+    transform:
+      scale(1);
+  }
+
+  50% {
+    opacity: 0.42;
+
+    transform:
+      scale(1.03);
+  }
+
+  100% {
+    opacity: 0.28;
+
+    transform:
+      scale(1.06);
+  }
+}
+
+
+/* ==================================================
+   BUTTERFLY BASE
+================================================== */
+
+.opening-butterfly {
+  position: absolute;
+
+  width: 45px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  pointer-events: none;
+
+  user-select: none;
+
+  opacity: 0.82;
+
+  filter:
+    drop-shadow(
+      0 5px 8px
+      rgba(111, 96, 125, 0.18)
+    );
+
+  will-change:
+    transform,
+    opacity;
+
+  transition:
+    opacity 0.5s ease;
+
+  animation:
+    butterflyFloat
+    11s
+    ease-in-out
+    infinite,
+    butterflyBreathing
+    6s
+    ease-in-out
+    infinite alternate;
+}
+
+
+/* ==================================================
+   BUTTERFLY FLOAT
+================================================== */
+
+@keyframes butterflyFloat {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      rotate(0deg);
+  }
+
+  20% {
+    transform:
+      translate3d(6px, -8px, 0)
+      rotate(1deg);
+  }
+
+  40% {
+    transform:
+      translate3d(-4px, -15px, 0)
+      rotate(-1deg);
+  }
+
+  60% {
+    transform:
+      translate3d(-7px, -10px, 0)
+      rotate(1.5deg);
+  }
+
+  80% {
+    transform:
+      translate3d(5px, -5px, 0)
+      rotate(-1deg);
+  }
+}
+
+
+/* ==================================================
+   BUTTERFLY BREATHING
+================================================== */
+
+@keyframes butterflyBreathing {
+
+  0% {
+    opacity: 0.60;
+  }
+
+  50% {
+    opacity: 0.80;
+  }
+
+  100% {
+    opacity: 0.92;
+  }
+}
+
+
+/* ==================================================
+   OPENING CARD
+================================================== */
+
+.opening-content {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+
+  max-width: 400px;
+
+  padding:
+    46px 30px 40px;
+
+  border-radius: 30px;
+
+  animation:
+    openingContentIn
+    3s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+
+/* ==================================================
+   CARD DECORATION
+================================================== */
+
+.opening-content::before {
+  content: '';
+
+  position: absolute;
+
+  top: 13px;
+
+  left: 50%;
+
+  width: 55px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(116, 98, 127, 0.45),
+      transparent
+    );
+
+  transform:
+    translateX(-50%);
+}
+
+
+.opening-content::after {
+  content: '';
+
+  position: absolute;
+
+  bottom: 13px;
+
+  left: 50%;
+
+  width: 55px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(116, 98, 127, 0.35),
+      transparent
+    );
+
+  transform:
+    translateX(-50%);
+}
+
+
+/* ==================================================
+   CONTENT ENTRANCE
+================================================== */
+
+@keyframes openingContentIn {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(35px)
+      scale(0.96);
+
+    filter:
+      blur(5px);
+  }
+
+  60% {
+    opacity: 0.85;
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+    filter:
+      blur(0);
+  }
+}
+
+
+/* ==================================================
+   SMALL FLOWER
+================================================== */
+
+.opening-flower {
+  margin-bottom: 16px;
+
+  color:
+    var(--dusty-purple);
+
+  font-size: 1rem;
+
+  opacity: 0.7;
+
+  animation:
+    openingSparkle
+    5s
+    ease-in-out
+    infinite,
+    ornamentReveal
+    2s
+    ease-out
+    both;
+}
+
+
+@keyframes openingSparkle {
+
+  0%,
+  100% {
+    opacity: 0.45;
+
+    transform:
+      scale(0.9)
+      rotate(0deg);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform:
+      scale(1.1)
+      rotate(2deg);
+  }
+}
+
+
+@keyframes ornamentReveal {
+
+  from {
+    opacity: 0;
+
+    transform:
+      scale(0.7);
+  }
+
+  to {
+    opacity: 0.7;
+
+    transform:
+      scale(1);
+  }
+}
+
+
+/* ==================================================
+   OPENING LABEL
+================================================== */
+
+.opening-label {
+  margin:
+    0 0 17px;
+
+  color:
+    var(--dusty-purple);
+
+  font-size:
+    0.72rem;
+
+  letter-spacing:
+    0.3em;
+
+  line-height:
+    1.6;
+
+  text-transform:
+    uppercase;
+
+  animation:
+    elegantFadeIn
+    2s
+    ease-out
+    0.3s
+    both;
+}
+
+
+/* ==================================================
+   NAMES
+================================================== */
+
+.opening-names {
+  margin: 0;
+
+  color:
+    var(--text-dark);
+
+  font-family:
+    'Great Vibes',
+    cursive;
+
+  font-size:
+    clamp(
+      4rem,
+      16vw,
+      5.4rem
+    );
+
+  font-weight: 400;
+
+  line-height:
+    0.95;
+
+  letter-spacing:
+    0.01em;
+
+  animation:
+    namesCinematicReveal
+    2.8s
+    ease-out
+    0.8s
+    both;
+}
+
+
+@keyframes namesCinematicReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(18px)
+      scale(0.96);
+
+    filter:
+      blur(5px);
+
+    letter-spacing:
+      0.04em;
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+    filter:
+      blur(0);
+
+    letter-spacing:
+      0.01em;
+  }
+}
+
+
+.opening-names span {
+  display: inline-block;
+
+  margin:
+    0 8px;
+
+  color:
+    var(--dusty-purple);
+
+  font-family:
+    'Cormorant Garamond',
+    serif;
+
+  font-size:
+    0.52em;
+
+  font-style:
+    italic;
+
+  vertical-align:
+    middle;
+
+  animation:
+    elegantFadeIn
+    2s
+    ease-out
+    1.2s
+    both;
+}
+
+
+/* ==================================================
+   DATE
+================================================== */
+
+.opening-date {
+  margin:
+    24px 0 20px;
+
+  color:
+    #625969;
+
+  font-size:
+    0.85rem;
+
+  letter-spacing:
+    0.3em;
+
+  font-weight:
+    500;
+
+  animation:
+    elegantFadeIn
+    2s
+    ease-out
+    1.8s
+    both;
+}
+
+
+/* ==================================================
+   DIVIDER
+================================================== */
+
+.opening-divider {
+  display: flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    12px;
+
+  margin:
+    0 auto 25px;
+
+  width:
+    150px;
+
+  animation:
+    dividerReveal
+    2.2s
+    ease-out
+    2s
+    both;
+}
+
+
+@keyframes dividerReveal {
+
+  from {
+    opacity: 0;
+
+    transform:
+      scaleX(0);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      scaleX(1);
+  }
+}
+
+
+.opening-divider span {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(116, 98, 127, 0.45)
+    );
+}
+
+
+.opening-divider span:last-child {
+  background:
+    linear-gradient(
+      to left,
+      transparent,
+      rgba(116, 98, 127, 0.45)
+    );
+}
+
+
+.opening-divider i {
+  color:
+    var(--dusty-purple);
+
+  font-size:
+    0.9rem;
+
+  font-style:
+    normal;
+
+  animation:
+    dividerStar
+    4s
+    ease-in-out
+    infinite;
+}
+
+
+@keyframes dividerStar {
+
+  0%,
+  100% {
+    opacity: 0.5;
+
+    transform:
+      scale(0.9)
+      rotate(0deg);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform:
+      scale(1.15)
+      rotate(8deg);
+  }
+}
+
+
+/* ==================================================
+   OPEN BUTTON
+================================================== */
+
+.open-invitation-button {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    9px;
+
+  min-width:
+    175px;
+
+  padding:
+    13px 26px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.5);
+
+  border-radius:
+    999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--deep-purple),
+      #8a7695
+    );
+
+  color:
+    var(--white);
+
+  font-family:
+    'Cormorant Garamond',
+    serif;
+
+  font-size:
+    1rem;
+
+  letter-spacing:
+    0.04em;
+
+  cursor:
+    pointer;
+
+  box-shadow:
+    0 10px 30px
+    rgba(111, 96, 125, 0.2);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+
+  animation:
+    buttonReveal
+    2s
+    ease-out
+    2.5s
+    both;
+}
+
+
+/* ==================================================
+   BUTTON REVEAL
+================================================== */
+
+@keyframes buttonReveal {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(15px)
+      scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+.open-invitation-button:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #85718f,
+      var(--dusty-purple)
+    );
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 16px 38px
+    rgba(111, 96, 125, 0.28);
+}
+
+
+.open-invitation-button:active {
+  transform:
+    translateY(-1px)
+    scale(0.98);
+}
+
+
+/* ==================================================
+   BUTTON ICON
+================================================== */
+
+.button-icon {
+  font-size:
+    0.95rem;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.open-invitation-button:hover .button-icon {
+  transform:
+    scale(1.15);
+}
+
+
+/* ==================================================
+   OPENING HINT
+================================================== */
+
+.opening-hint {
+  margin:
+    18px 0 0;
+
+  color:
+    #8c8192;
+
+  font-size:
+    0.72rem;
+
+  letter-spacing:
+    0.08em;
+
+  font-style:
+    italic;
+
+  animation:
+    elegantFadeIn
+    2s
+    ease-out
+    3.2s
+    both;
+}
+
+
+/* ==================================================
+   GENERIC FADE
+================================================== */
+
+@keyframes elegantFadeIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(10px);
+
+    filter:
+      blur(3px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+    filter:
+      blur(0);
+  }
+}
+
+
+/* ==================================================
+   OPENING EXIT
+================================================== */
+
+.opening-screen-hidden {
+  opacity: 0;
+
+  visibility:
+    hidden;
+
+  pointer-events:
+    none;
+
+  transform:
+    scale(1.02);
+}
+
+
+/* ==================================================
+   INVITATION CARD HIDDEN
+================================================== */
+
+.invitation-card-hidden {
+  opacity: 0;
+
+  transform:
+    translateY(25px);
+}
+
+
+/* ==================================================
+   INVITATION CARD VISIBLE
+================================================== */
+
+.invitation-card-visible {
+  opacity: 1;
+
+  transform:
+    translateY(0);
+
+  transition:
+    opacity 1.2s ease 0.25s,
+    transform 1.2s ease 0.25s;
+}
+
+
+/* ==================================================
+   SCROLL REVEAL
+================================================== */
+
+.scroll-reveal {
+  opacity: 0;
+
+  transform:
+    translateY(20px);
+
+  filter:
+    blur(2px);
+
+  transition:
+    opacity 4s ease,
+    transform 4s ease,
+    filter 4s ease;
+}
+
+
+.scroll-reveal-visible {
+  opacity: 1;
+
+  transform:
+    translateY(0);
+
+  filter:
+    blur(0);
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 767px) {
+
+  .opening-screen {
+    padding:
+      25px 18px;
+
+    background-color:
+      #f3eef5;
+  }
+
+
+  .opening-screen::before {
+    background-size:
+      contain;
+
+    background-position:
+      center center;
+
+    background-repeat:
+      no-repeat;
+  }
+
+
+  .opening-content {
+    max-width:
+      300px;
+
+    padding:
+      42px 24px 36px;
+
+    border-radius:
+      26px;
+  }
+
+
+  .opening-label {
+    font-size:
+      0.68rem;
+
+    letter-spacing:
+      0.24em;
+  }
+
+
+  .opening-names {
+    font-size:
+      4rem;
+  }
+
+
+  .opening-names span {
+    margin:
+      0 5px;
+  }
+
+
+  .opening-date {
+    margin:
+      22px 0 18px;
+
+    font-size:
+      0.78rem;
+
+    letter-spacing:
+      0.25em;
+  }
+
+
+  .open-invitation-button {
+    min-width:
+      165px;
+
+    padding:
+      12px 24px;
+
+    font-size:
+      0.95rem;
+  }
+
+
+  .opening-hint {
+    font-size:
+      0.68rem;
+  }
+
+
+  .opening-butterfly {
+    width:
+      35px;
+  }
+}
+
+
+/* ==================================================
+   VERY SMALL PHONE
+================================================== */
+
+@media (max-width: 360px) {
+
+  .opening-screen {
+    padding:
+      20px 12px;
+  }
+
+
+  .opening-content {
+    max-width:
+      285px;
+
+    padding:
+      36px 18px 32px;
+  }
+
+
+  .opening-names {
+    font-size:
+      3.5rem;
+  }
+
+
+  .opening-label {
+    font-size:
+      0.62rem;
+
+    letter-spacing:
+      0.18em;
+  }
+
+
+  .opening-date {
+    font-size:
+      0.7rem;
+
+    letter-spacing:
+      0.2em;
+  }
+
+
+  .opening-butterfly {
+    width:
+      30px;
+  }
+}
+
+
+/* ==================================================
+   TABLET / DESKTOP
+================================================== */
+
+@media (min-width: 768px) {
+
+  .opening-content {
+    max-width:
+      430px;
+  }
+
+
+  .opening-names {
+    font-size:
+      clamp(
+        4.5rem,
+        8vw,
+        5.8rem
+      );
+  }
+}
+
+
+/* ==================================================
+   REDUCED MOTION
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .opening-screen,
+  .opening-screen::before,
+  .opening-screen::after,
+  .opening-content,
+  .opening-butterfly,
+  .opening-flower,
+  .opening-label,
+  .opening-names,
+  .opening-names span,
+  .opening-date,
+  .opening-divider,
+  .opening-divider i,
+  .open-invitation-button,
+  .opening-hint,
+  .invitation-card,
+  .scroll-reveal {
+    animation: none !important;
+
+    transition: none !important;
+  }
+
+
+  .opening-screen::before {
+    opacity: 1;
+
+    transform:
+      scale(1);
+
+    filter:
+      blur(0);
+  }
+
+
+  .opening-content {
+    opacity: 1;
+
+    transform:
+      none;
+
+    filter:
+      none;
+  }
+
+
+  .opening-label,
+  .opening-names,
+  .opening-names span,
+  .opening-date,
+  .opening-divider,
+  .opening-hint {
+    opacity: 1;
+
+    transform:
+      none;
+
+    filter:
+      none;
+  }
+
+
+  .scroll-reveal {
+    opacity: 1;
+
+    transform:
+      none;
+
+    filter:
+      none;
   }
 }

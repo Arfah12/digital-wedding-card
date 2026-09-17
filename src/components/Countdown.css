@@ -1,0 +1,656 @@
+/* =========================
+   COUNTDOWN SECTION
+========================= */
+
+.countdown-section {
+  position: relative;
+  min-height: 70vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 90px 20px;
+
+  box-sizing: border-box;
+  text-align: center;
+
+  background-color: var(--light-lavender, #f3eef5);
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.18),
+      rgba(255, 255, 255, 0.18)
+    ),
+    url('../assets/new.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   SOFT OVERLAY
+========================= */
+
+.countdown-section::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(243, 238, 245, 0.15);
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+/* =========================
+   MAIN COUNTDOWN FRAME
+========================= */
+
+.countdown-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 390px;
+
+  padding: 45px 28px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  /* Elegant translucent background */
+  background: rgba(255, 255, 255, 0.48);
+
+  /* Thin vintage frame */
+  border: 1px solid rgba(116, 98, 127, 0.35);
+
+  border-radius: 4px;
+
+  box-shadow:
+    0 12px 35px rgba(80, 60, 100, 0.08);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+
+/* =========================
+   INNER VINTAGE FRAME
+========================= */
+
+.countdown-container::after {
+  content: "";
+
+  position: absolute;
+
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+
+  border: 1px solid rgba(155, 138, 166, 0.25);
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   SECTION LABEL
+========================= */
+
+.countdown-container .section-label {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 10px;
+
+  color: var(--dusty-purple, #9b8aa6);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 0.72rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.28em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.countdown-title {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 32px;
+
+  color: var(--text-dark, #403746);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: clamp(2rem, 5vw, 2.8rem);
+
+  font-weight: 400;
+
+  font-style: italic;
+
+  line-height: 1.1;
+
+  letter-spacing: 0.02em;
+}
+
+
+/* =========================
+   DECORATIVE LINE
+========================= */
+
+.countdown-title::after {
+  content: "✦";
+
+  display: block;
+
+  margin-top: 12px;
+
+  color: var(--dusty-purple, #9b8aa6);
+
+  font-size: 0.65rem;
+
+  font-style: normal;
+}
+
+
+/* =========================
+   COUNTDOWN GRID
+========================= */
+
+.countdown-grid {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 8px;
+}
+
+
+/* =========================
+   COUNTDOWN ITEM
+========================= */
+
+.countdown-item {
+  position: relative;
+
+  min-width: 0;
+
+  min-height: 82px;
+
+  padding: 14px 4px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.32);
+
+  border: none;
+
+  border-right: 1px solid
+    rgba(116, 98, 127, 0.18);
+
+  border-radius: 0;
+
+  box-shadow: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* Remove border from last item */
+
+.countdown-item:last-child {
+  border-right: none;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.countdown-item:hover {
+  transform: translateY(-3px);
+
+  background: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================
+   NUMBER
+========================= */
+
+.countdown-number {
+  display: block;
+
+  color: var(--deep-purple, #74627f);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 2.15rem;
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+.countdown-label {
+  display: block;
+
+  margin-top: 7px;
+
+  color: var(--dusty-purple, #9b8aa6);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 0.62rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   BUTTERFLIES
+========================= */
+
+.countdown-butterfly {
+  position: absolute;
+
+  z-index: 3;
+
+  pointer-events: none;
+  user-select: none;
+
+  will-change: transform;
+
+  filter:
+    drop-shadow(
+      0 8px 12px
+      rgba(80, 60, 100, 0.15)
+    );
+}
+
+
+.countdown-butterfly img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+
+/* =========================
+   BUTTERFLY POSITIONS
+========================= */
+
+.countdown-butterfly-one {
+  top: 10%;
+  left: 7%;
+
+  width: 30px;
+
+  animation:
+    countdownButterflyOne
+    9s
+    ease-in-out
+    infinite;
+}
+
+
+.countdown-butterfly-two {
+  top: 15%;
+  right: 7%;
+
+  width: 25px;
+
+  animation:
+    countdownButterflyTwo
+    11s
+    ease-in-out
+    infinite;
+}
+
+
+.countdown-butterfly-three {
+  bottom: 12%;
+  left: 10%;
+
+  width: 25px;
+
+  animation:
+    countdownButterflyThree
+    10s
+    ease-in-out
+    infinite;
+}
+
+
+.countdown-butterfly-four {
+  right: 10%;
+  bottom: 14%;
+
+  width: 30px;
+
+  animation:
+    countdownButterflyFour
+    13s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================
+   BUTTERFLY ANIMATIONS
+========================= */
+
+@keyframes countdownButterflyOne {
+
+  0%, 100% {
+    transform:
+      translate(0, 0)
+      rotate(-8deg);
+  }
+
+  25% {
+    transform:
+      translate(18px, -22px)
+      rotate(8deg);
+  }
+
+  50% {
+    transform:
+      translate(40px, -6px)
+      rotate(-5deg);
+  }
+
+  75% {
+    transform:
+      translate(12px, 20px)
+      rotate(6deg);
+  }
+}
+
+
+@keyframes countdownButterflyTwo {
+
+  0%, 100% {
+    transform:
+      scaleX(-1)
+      translate(0, 0)
+      rotate(5deg);
+  }
+
+  25% {
+    transform:
+      scaleX(-1)
+      translate(-25px, 18px)
+      rotate(-6deg);
+  }
+
+  50% {
+    transform:
+      scaleX(-1)
+      translate(-48px, -8px)
+      rotate(8deg);
+  }
+
+  75% {
+    transform:
+      scaleX(-1)
+      translate(-20px, -30px)
+      rotate(-4deg);
+  }
+}
+
+
+@keyframes countdownButterflyThree {
+
+  0%, 100% {
+    transform:
+      translate(0, 0)
+      rotate(-4deg);
+  }
+
+  25% {
+    transform:
+      translate(18px, -22px)
+      rotate(6deg);
+  }
+
+  50% {
+    transform:
+      translate(40px, -8px)
+      rotate(-5deg);
+  }
+
+  75% {
+    transform:
+      translate(18px, 22px)
+      rotate(5deg);
+  }
+}
+
+
+@keyframes countdownButterflyFour {
+
+  0%, 100% {
+    transform:
+      scaleX(-1)
+      translate(0, 0)
+      rotate(5deg);
+  }
+
+  25% {
+    transform:
+      scaleX(-1)
+      translate(-25px, -22px)
+      rotate(-6deg);
+  }
+
+  50% {
+    transform:
+      scaleX(-1)
+      translate(-45px, 6px)
+      rotate(7deg);
+  }
+
+  75% {
+    transform:
+      scaleX(-1)
+      translate(-18px, 26px)
+      rotate(-5deg);
+  }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .countdown-section {
+    min-height: auto;
+
+    padding: 70px 16px;
+  }
+
+  .countdown-container {
+    max-width: 390px;
+
+    padding: 38px 20px;
+  }
+
+  .countdown-title {
+    margin-bottom: 28px;
+
+    font-size: 2.2rem;
+  }
+
+  .countdown-grid {
+    gap: 5px;
+  }
+
+  .countdown-item {
+    min-height: 78px;
+
+    padding: 10px 3px;
+  }
+
+  .countdown-number {
+    font-size: 1.8rem;
+  }
+
+  .countdown-label {
+    margin-top: 5px;
+
+    font-size: 0.55rem;
+
+    letter-spacing: 0.08em;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .countdown-section {
+    padding: 60px 12px;
+  }
+
+  .countdown-container {
+    max-width: 370px;
+
+    padding: 34px 14px;
+  }
+
+  .countdown-container::after {
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+  }
+
+  .countdown-container .section-label {
+    font-size: 0.65rem;
+  }
+
+  .countdown-title {
+    font-size: 2rem;
+
+    margin-bottom: 25px;
+  }
+
+  .countdown-grid {
+    gap: 2px;
+  }
+
+  .countdown-item {
+    min-height: 72px;
+
+    padding: 8px 2px;
+  }
+
+  .countdown-number {
+    font-size: 1.55rem;
+  }
+
+  .countdown-label {
+    font-size: 0.48rem;
+
+    letter-spacing: 0.04em;
+  }
+}
+
+
+/* =========================
+   VERY SMALL PHONE
+========================= */
+
+@media (max-width: 360px) {
+
+  .countdown-section {
+    padding: 50px 8px;
+  }
+
+  .countdown-container {
+    padding: 30px 10px;
+  }
+
+  .countdown-title {
+    font-size: 1.8rem;
+  }
+
+  .countdown-grid {
+    gap: 1px;
+  }
+
+  .countdown-item {
+    min-height: 65px;
+
+    padding: 7px 1px;
+  }
+
+  .countdown-number {
+    font-size: 1.35rem;
+  }
+
+  .countdown-label {
+    font-size: 0.42rem;
+
+    letter-spacing: 0.02em;
+  }
+}

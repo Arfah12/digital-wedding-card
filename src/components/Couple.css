@@ -1,0 +1,249 @@
+/* =========================
+   COUPLE SECTION
+========================= */
+
+.couple-section {
+  position: relative;
+
+  min-height: 600px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 24px;
+
+  overflow: hidden;
+
+  background-image:
+    url('../assets/new.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  text-align: center;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.couple-content {
+  position: relative;
+
+  width: 100%;
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  padding: 50px 40px;
+
+  text-align: center;
+}
+
+
+/* =========================
+   SECTION LABEL
+========================= */
+
+.couple-content .section-label {
+  margin-bottom: 18px;
+
+  color: var(--dusty-purple);
+
+  font-size: 0.75rem;
+
+  letter-spacing: 0.25em;
+
+  font-weight: 500;
+}
+
+
+/* =========================
+   NAMES
+========================= */
+
+.couple-content h2 {
+  margin: 0;
+
+  color: var(--text-dark);
+
+  font-size: 3rem;
+
+  font-weight: 400;
+
+  line-height: 1.15;
+}
+
+
+.couple-content h2 span {
+  display: block;
+
+  margin: 10px 0;
+
+  color: var(--dusty-purple);
+
+  font-size: 1.5rem;
+
+  font-style: italic;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.couple-story {
+  max-width: 580px;
+
+  margin: 28px auto 0;
+
+  color: #5c5363;
+
+  font-size: 0.95rem;
+
+  line-height: 1.9;
+
+  text-align: center;
+}
+
+
+/* =========================
+   DECORATION
+========================= */
+
+.couple-content::before,
+.couple-content::after {
+  content: '✦';
+
+  display: block;
+
+  color: var(--dusty-purple);
+
+  font-size: 1rem;
+
+  opacity: 0.8;
+}
+
+
+.couple-content::before {
+  margin-bottom: 20px;
+}
+
+
+.couple-content::after {
+  margin-top: 25px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .couple-section {
+    min-height: 600px;
+
+    padding: 70px 20px;
+  }
+
+  .couple-content {
+    max-width: 600px;
+
+    padding: 40px 25px;
+  }
+
+  .couple-content h2 {
+    font-size: 2.5rem;
+  }
+
+}
+/* =========================
+   MOBILE
+   <= 600px
+========================= */
+
+@media (max-width: 600px) {
+
+  .couple-section {
+    min-height: 550px;
+    padding: 60px 16px;
+
+    background-size: auto 100%;
+    background-position: center;
+  }
+
+  .couple-content {
+    width: 100%;
+    max-width: 380px;
+    padding: 30px 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .couple-content .section-label {
+    margin-bottom: 14px;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+  }
+
+  .couple-content h2 {
+    font-size: 1.9rem;
+    line-height: 1.15;
+  }
+
+  .couple-content h2 span {
+    margin: 7px 0;
+    font-size: 1.05rem;
+  }
+
+  .couple-story {
+    max-width: 350px;
+    margin: 22px auto 0;
+
+    font-size: 0.82rem;
+    line-height: 1.75;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+   <= 400px
+========================= */
+
+@media (max-width: 400px) {
+
+  .couple-section {
+    min-height: 500px;
+    padding: 45px 12px;
+  }
+
+  .couple-content {
+    max-width: 350px;
+    padding: 30px 10px;
+  }
+
+  .couple-content .section-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+  }
+
+  .couple-content h2 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .couple-content h2 span {
+    font-size: 6.5rem;
+  }
+
+  .couple-story {
+    font-size: 0.88rem;
+    line-height: 1.75;
+  }
+
+}

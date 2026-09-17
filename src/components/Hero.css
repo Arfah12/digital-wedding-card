@@ -1,0 +1,1102 @@
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+
+  min-height: 80svh;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding: 100px 20px 40px;
+
+  text-align: center;
+
+  background-image:
+    url('../assets/new.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  isolation: isolate;
+}
+
+
+/* =========================
+   SOFT OVERLAY
+========================= */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.08)
+    );
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 5;
+
+  width: 90%;
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+}
+
+
+.invitation-card-visible .hero-content {
+  animation:
+    heroContentFadeIn
+    4s
+    ease-out
+    both;
+}
+
+
+@keyframes heroContentFadeIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px);
+
+    filter:
+      blur(3px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+    filter:
+      blur(0);
+  }
+
+}
+
+
+/* =========================
+   HERO ENTRANCE
+========================= */
+
+@keyframes heroFadeUp {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(-25px);
+  }
+
+}
+
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.hero-subtitle {
+  color:
+    var(--deep-purple);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(0.5rem, 0.8vw, 4rem);
+
+  font-weight: 600;
+
+  letter-spacing:
+    0.35em;
+
+  margin-bottom: 40px;
+
+  text-transform: uppercase;
+
+  animation-delay: 0.15s;
+}
+
+
+.hero-line {
+  position: relative;
+}
+
+
+.hero-line-subtitle {
+  animation-delay: 0.2s;
+}
+
+
+/* =========================
+   BRIDE & GROOM NAME
+   CALLIGRAPHY STYLE
+========================= */
+
+.hero-title {
+
+  color:
+    var(--text-dark);
+
+  font-family:
+    "Great Vibes",
+    "Brush Script MT",
+    "Segoe Script",
+    cursive;
+
+  font-size:
+    clamp(4rem, 4vw, 7rem);
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  line-height: 0.85;
+
+  letter-spacing:
+    0.01em;
+
+  text-align: center;
+
+  margin: 0;
+
+  text-shadow:
+    0 3px 15px
+    rgba(255, 255, 255, 0.35);
+
+  animation-delay: 0.42s;
+}
+
+
+/* =========================
+   "&"
+========================= */
+
+.hero-title > .hero-line-ampersand {
+
+  display: block;
+
+  color:
+    var(--dusty-purple);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size:
+    0.38em;
+
+  font-weight: 400;
+
+  font-style: italic;
+
+  line-height: 1;
+
+  letter-spacing: 0;
+
+  margin:
+    18px 0;
+
+  text-transform: none;
+}
+
+
+.hero-line-ampersand {
+  animation: none;
+}
+
+
+.hero-word {
+  display: inline-block;
+
+  margin-right: 0.08em;
+
+  opacity: 1;
+
+  animation: none;
+}
+
+
+/* =========================
+   DATE
+========================= */
+
+.hero-date {
+
+  color:
+    var(--deep-purple);
+
+  margin-top:
+    38px;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(0.8rem, 2vw, 1rem);
+
+  font-weight: 500;
+
+  letter-spacing:
+    0.2em;
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  animation-delay: 0.8s;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+/* =========================
+   MESSAGE
+========================= */
+
+.hero-message {
+
+  max-width: 650px;
+
+  margin: 25px auto 0;
+
+  color: var(--text-dark);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(1.15rem, 1.2vw, 1.45rem);
+
+  font-weight: 400;
+
+  font-style: italic;
+
+  line-height: 1.8;
+
+  letter-spacing: 0.02em;
+
+  text-align: center;
+
+  text-shadow:
+    0 2px 10px
+    rgba(255, 255, 255, 0.25);
+}
+
+
+.hero-line-message {
+  animation-delay: 1.05s;
+}
+
+
+.hero-message > .hero-message-line {
+  display: block;
+}
+
+
+@keyframes elegantLineReveal {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(16px);
+
+    filter:
+      blur(4px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+    filter:
+      blur(0);
+  }
+
+}
+/* =========================
+   BUTTON
+========================= */
+
+.hero-button {
+
+  position: relative;
+
+  margin-top:
+    28px;
+
+  padding:
+    13px 32px;
+
+  border: none;
+
+  border-radius:
+    999px;
+
+  background:
+    var(--deep-purple);
+
+  color:
+    var(--white);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size:
+    0.8rem;
+
+  font-weight: 500;
+
+  letter-spacing:
+    0.12em;
+
+  text-transform:
+    uppercase;
+
+  box-shadow:
+    0 10px 30px
+    rgba(111, 96, 125, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  cursor: pointer;
+}
+
+
+.hero-button:hover {
+
+  background:
+    var(--dusty-purple);
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(111, 96, 125, 0.35);
+}
+
+
+.hero-button:active {
+
+  transform:
+    translateY(-1px);
+}
+
+
+/* =========================
+   BUTTERFLIES
+========================= */
+
+.butterfly {
+
+  position: absolute;
+
+  z-index: 3;
+
+  pointer-events: none;
+
+  user-select: none;
+
+  will-change:
+    transform;
+
+  filter:
+    drop-shadow(
+      0 8px 12px
+      rgba(80, 60, 100, 0.15)
+    );
+}
+
+
+.butterfly img {
+
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+}
+
+
+/* =========================
+   BUTTERFLY 1
+========================= */
+
+.butterfly-one {
+
+  top: 9%;
+  left: 7%;
+
+  width: 45px;
+
+  animation:
+    butterflyOne
+    8s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================
+   BUTTERFLY 2
+========================= */
+
+.butterfly-two {
+
+  top: 80%;
+  right: 90%;
+
+  width: 0px;
+
+  animation:
+    butterflyTwo
+    10s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================
+   BUTTERFLY 3
+========================= */
+
+.butterfly-three {
+
+  bottom: 5%;
+  left: 60%;
+
+  width: 0px;
+
+  animation:
+    butterflyThree
+    9s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================
+   BUTTERFLY 4
+========================= */
+
+.butterfly-four {
+
+  right: 14%;
+  bottom: 12%;
+
+  width: 30px;
+
+  animation:
+    butterflyFour
+    12s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================
+   BUTTERFLY ONE
+========================= */
+
+@keyframes butterflyOne {
+
+  0% {
+    transform:
+      translate(0, 0)
+      rotate(-8deg);
+  }
+
+  25% {
+    transform:
+      translate(20px, -25px)
+      rotate(8deg);
+  }
+
+  50% {
+    transform:
+      translate(45px, -8px)
+      rotate(-5deg);
+  }
+
+  75% {
+    transform:
+      translate(15px, 25px)
+      rotate(6deg);
+  }
+
+  100% {
+    transform:
+      translate(0, 0)
+      rotate(-8deg);
+  }
+
+}
+
+
+/* =========================
+   BUTTERFLY TWO
+========================= */
+
+@keyframes butterflyTwo {
+
+  0% {
+    transform:
+      scaleX(-1)
+      translate(0, 0)
+      rotate(5deg);
+  }
+
+  25% {
+    transform:
+      scaleX(-1)
+      translate(-30px, 20px)
+      rotate(-6deg);
+  }
+
+  50% {
+    transform:
+      scaleX(-1)
+      translate(-55px, -10px)
+      rotate(8deg);
+  }
+
+  75% {
+    transform:
+      scaleX(-1)
+      translate(-25px, -35px)
+      rotate(-4deg);
+  }
+
+  100% {
+    transform:
+      scaleX(-1)
+      translate(0, 0)
+      rotate(5deg);
+  }
+
+}
+
+
+/* =========================
+   BUTTERFLY THREE
+========================= */
+
+@keyframes butterflyThree {
+
+  0% {
+    transform:
+      translate(0, 0)
+      rotate(-4deg);
+  }
+
+  25% {
+    transform:
+      translate(20px, -25px)
+      rotate(6deg);
+  }
+
+  50% {
+    transform:
+      translate(45px, -10px)
+      rotate(-5deg);
+  }
+
+  75% {
+    transform:
+      translate(20px, 25px)
+      rotate(5deg);
+  }
+
+  100% {
+    transform:
+      translate(0, 0)
+      rotate(-4deg);
+  }
+
+}
+
+
+/* =========================
+   BUTTERFLY FOUR
+========================= */
+
+@keyframes butterflyFour {
+
+  0% {
+    transform:
+      scaleX(-1)
+      translate(0, 0)
+      rotate(5deg);
+  }
+
+  25% {
+    transform:
+      scaleX(-1)
+      translate(-30px, -25px)
+      rotate(-6deg);
+  }
+
+  50% {
+    transform:
+      scaleX(-1)
+      translate(-50px, 5px)
+      rotate(7deg);
+  }
+
+  75% {
+    transform:
+      scaleX(-1)
+      translate(-20px, 30px)
+      rotate(-5deg);
+  }
+
+  100% {
+    transform:
+      scaleX(-1)
+      translate(0, 0)
+      rotate(5deg);
+  }
+
+}
+
+
+/* =========================
+   FADE IN
+========================= */
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+
+    min-height:
+      80svh;
+
+    padding:
+      95px 20px 50px;
+
+    background-position:
+      center;
+  }
+
+
+  .hero-content {
+
+    width:
+      95%;
+
+    transform:
+      translateY(30px);
+  }
+
+
+  @keyframes heroFadeUpMobile {
+
+    from {
+      opacity: 0;
+
+      transform:
+        translateY(60px);
+    }
+
+    to {
+      opacity: 1;
+
+      transform:
+        translateY(30px);
+    }
+
+  }
+
+
+  .hero-subtitle {
+
+    font-size:
+      0.6rem;
+
+    letter-spacing:
+      0.25em;
+
+    margin-bottom:
+      18px;
+  }
+
+
+  .hero-title {
+
+    font-size:
+      clamp(
+        4rem,
+        18vw,
+        5.5rem
+      );
+
+    line-height:
+      0.8;
+
+    letter-spacing:
+      0;
+  }
+
+
+  .hero-title > .hero-line-ampersand {
+
+    font-size:
+      0.38em;
+
+    margin:
+      16px 0;
+  }
+
+
+  .hero-date {
+
+    margin-top:
+      32px;
+
+    font-size:
+      0.72rem;
+
+    letter-spacing:
+      0.12em;
+  }
+
+
+.hero-message {
+
+  max-width: 340px;
+
+  margin-top: 20px;
+
+  font-size: 5rem;
+
+  font-weight: 400;
+
+  font-style: italic;
+
+  line-height: 1.7;
+
+  letter-spacing: 0.01em;
+}
+
+  .hero-button {
+
+    margin-top:
+      25px;
+
+    padding:
+      12px 27px;
+
+    font-size:
+      0.7rem;
+  }
+
+
+  /* =========================
+     BUTTERFLY POSITIONS
+  ========================= */
+
+  .butterfly-one {
+
+    top:
+      7%;
+
+    left:
+      3%;
+
+    width:
+      38px;
+  }
+
+
+  .butterfly-two {
+
+    top:
+      15%;
+
+    right:
+      2%;
+
+    width:
+      35px;
+  }
+
+
+  .butterfly-three {
+
+    bottom:
+      30%;
+
+    left:
+      6%;
+
+    width:
+      35px;
+  }
+
+
+  .butterfly-four {
+
+    right:
+      5%;
+
+    bottom:
+      50%;
+
+    width:
+      45px;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .hero {
+
+    min-height:
+      80svh;
+
+    padding-top:
+      100px;
+  }
+
+
+  .hero-title {
+
+    font-size:
+      3.7rem;
+
+      padding-top:
+        5px;
+  }
+
+
+  .hero-message {
+
+    font-size:
+      01.2rem;
+  }
+
+
+  .butterfly-four {
+
+    display:
+      none;
+  }
+
+}
+
+
+/* =========================
+   REDUCE MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-content,
+  .butterfly,
+  .hero-line,
+  .hero-line-ampersand,
+  .hero-message-line,
+  .hero-word {
+
+    animation: none !important;
+  }
+
+  .hero-content,
+  .hero-line,
+  .hero-message-line,
+  .hero-word {
+
+    opacity: 1;
+
+    transform:
+      none;
+
+    filter:
+      none;
+  }
+
+}
+
+/* ==========================================
+   FALLING SNOW
+========================================== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.snow-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.snowflake {
+  position: absolute;
+  top: -30px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 10px;
+  opacity: 1;
+  animation: snow-fall linear infinite;
+}
+
+/* Different positions & speeds */
+
+.snowflake-1  { left: 5%;  animation-duration: 8s;  animation-delay: 0s; }
+.snowflake-2  { left: 12%; animation-duration: 11s; animation-delay: 2s; }
+.snowflake-3  { left: 18%; animation-duration: 9s;  animation-delay: 4s; }
+.snowflake-4  { left: 25%; animation-duration: 13s; animation-delay: 1s; }
+.snowflake-5  { left: 32%; animation-duration: 10s; animation-delay: 5s; }
+.snowflake-6  { left: 38%; animation-duration: 8s;  animation-delay: 3s; }
+.snowflake-7  { left: 45%; animation-duration: 12s; animation-delay: 6s; }
+.snowflake-8  { left: 52%; animation-duration: 9s;  animation-delay: 2s; }
+.snowflake-9  { left: 58%; animation-duration: 11s; animation-delay: 4s; }
+.snowflake-10 { left: 65%; animation-duration: 8s;  animation-delay: 1s; }
+.snowflake-11 { left: 72%; animation-duration: 13s; animation-delay: 5s; }
+.snowflake-12 { left: 78%; animation-duration: 10s; animation-delay: 3s; }
+.snowflake-13 { left: 85%; animation-duration: 9s;  animation-delay: 7s; }
+.snowflake-14 { left: 92%; animation-duration: 12s; animation-delay: 2s; }
+
+.snowflake-15 { left: 8%;  animation-duration: 10s; animation-delay: 6s; }
+.snowflake-16 { left: 22%; animation-duration: 12s; animation-delay: 4s; }
+.snowflake-17 { left: 35%; animation-duration: 9s;  animation-delay: 8s; }
+.snowflake-18 { left: 48%; animation-duration: 11s; animation-delay: 3s; }
+.snowflake-19 { left: 62%; animation-duration: 13s; animation-delay: 7s; }
+.snowflake-20 { left: 75%; animation-duration: 8s;  animation-delay: 5s; }
+.snowflake-21 { left: 88%; animation-duration: 10s; animation-delay: 1s; }
+
+.snowflake-22 { left: 15%; animation-duration: 14s; animation-delay: 9s; }
+.snowflake-23 { left: 29%; animation-duration: 9s;  animation-delay: 6s; }
+.snowflake-24 { left: 42%; animation-duration: 12s; animation-delay: 4s; }
+.snowflake-25 { left: 55%; animation-duration: 10s; animation-delay: 8s; }
+.snowflake-26 { left: 69%; animation-duration: 13s; animation-delay: 2s; }
+.snowflake-27 { left: 82%; animation-duration: 9s;  animation-delay: 5s; }
+.snowflake-28 { left: 96%; animation-duration: 11s; animation-delay: 7s; }
+
+.snowflake-29 { left: 10%; animation-duration: 13s; animation-delay: 3s; }
+.snowflake-30 { left: 30%; animation-duration: 8s;  animation-delay: 9s; }
+.snowflake-31 { left: 50%; animation-duration: 14s; animation-delay: 1s; }
+.snowflake-32 { left: 70%; animation-duration: 10s; animation-delay: 6s; }
+.snowflake-33 { left: 90%; animation-duration: 12s; animation-delay: 4s; }
+.snowflake-34 { left: 40%; animation-duration: 9s;  animation-delay: 7s; }
+.snowflake-35 { left: 80%; animation-duration: 11s; animation-delay: 2s; }
+
+
+/* ==========================================
+   SNOW ANIMATION
+========================================== */
+
+@keyframes snow-fall {
+
+  0% {
+    transform:
+      translateY(-30px)
+      translateX(0)
+      rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    transform:
+      translateY(50vh)
+      translateX(25px)
+      rotate(180deg);
+  }
+
+  100% {
+    transform:
+      translateY(110vh)
+      translateX(-20px)
+      rotate(360deg);
+    opacity: 1;
+  }
+
+}
+

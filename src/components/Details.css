@@ -1,0 +1,756 @@
+/* =========================
+   DETAILS SECTION
+========================= */
+
+.details-section {
+  position: relative;
+
+  min-height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 120px 20px 80px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  background-image:
+    url('../assets/new2.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  isolation: isolate;
+}
+
+
+/* =========================
+   SOFT OVERLAY
+========================= */
+
+.details-section::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.08)
+    );
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+/* =========================
+   DETAILS CONTAINER
+========================= */
+
+.details-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: 94%;
+
+  max-width: 600px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.details-title {
+  margin: 0 0 18px;
+
+  color:
+    var(--text-dark);
+
+  font-family:
+    "Cormorant Garamond",
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(2.25rem, 6vw, 3.5rem);
+
+  font-weight: 500;
+
+  font-style: italic;
+
+  line-height: 1.1;
+
+  letter-spacing:
+    -0.02em;
+}
+
+
+/* =========================
+   DATE
+========================= */
+
+.details-date {
+  margin:
+    0 0 38px;
+
+  color:
+    var(--deep-purple);
+
+  font-size:
+    0.95rem;
+
+  font-weight: 500;
+
+  letter-spacing:
+    0.15em;
+
+  line-height:
+    1.6;
+}
+
+
+/* =========================
+   EVENT CARD
+========================= */
+
+.event-card {
+  width: 100%;
+
+  max-width: 430px;
+
+  margin: 0 auto;
+
+  padding:
+    40px 25px;
+
+  box-sizing: border-box;
+
+  background:
+    rgba(255, 255, 255, 0.28);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.55);
+
+  border-radius:
+    24px;
+
+  box-shadow:
+    0 12px 35px
+    rgba(111, 96, 125, 0.10);
+
+  backdrop-filter:
+    blur(4px);
+
+  -webkit-backdrop-filter:
+    blur(4px);
+}
+
+
+/* =========================
+   EVENT LABEL
+========================= */
+
+.event-label {
+  margin:
+    0 0 18px;
+
+  color:
+    var(--dusty-purple);
+
+  font-size:
+    0.7rem;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0.25em;
+
+  line-height:
+    1.5;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* =========================
+   EVENT TIME
+========================= */
+
+.event-time {
+  margin:
+    0 0 12px;
+
+  color:
+    var(--text-dark);
+
+  font-family:
+    "Cormorant Garamond",
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size:
+    1.5rem;
+
+  font-weight:
+    500;
+
+  line-height:
+    1.4;
+}
+
+
+/* =========================
+   EVENT VENUE
+========================= */
+
+.event-venue {
+  margin:
+    0 0 10px;
+
+  color:
+    var(--deep-purple);
+
+  font-size:
+    1rem;
+
+  font-weight:
+    500;
+
+  line-height:
+    1.5;
+}
+
+
+/* =========================
+   EVENT LOCATION
+========================= */
+
+.event-location {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    12px;
+
+  margin:
+    12px auto 25px;
+
+  max-width:
+    340px;
+}
+
+
+/* =========================
+   ADDRESS
+========================= */
+
+.event-location .event-address {
+  margin:
+    0;
+
+  color:
+    #5c5363;
+
+  font-size:
+    0.78rem;
+
+  line-height:
+    1.6;
+
+  text-align:
+    center;
+}
+
+
+/* =========================
+   GOOGLE MAP ICON
+========================= */
+
+.google-map-icon {
+  flex-shrink:
+    0;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  width:
+    34px;
+
+  height:
+    34px;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(111, 96, 125, 0.08);
+
+  color:
+    var(--dusty-purple);
+
+  font-size:
+    1rem;
+
+  text-decoration:
+    none;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================
+   GOOGLE MAP HOVER
+========================= */
+
+.google-map-icon:hover {
+  background:
+    var(--dusty-purple);
+
+  color:
+    white;
+
+  transform:
+    scale(1.08);
+
+  box-shadow:
+    0 6px 15px
+    rgba(111, 96, 125, 0.18);
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.event-timeline {
+  margin-top:
+    26px;
+
+  padding-top:
+    22px;
+
+  border-top:
+    1px solid
+    rgba(111, 96, 125, 0.18);
+
+  text-align:
+    left;
+}
+
+
+/* =========================
+   TIMELINE TITLE
+========================= */
+
+.timeline-title {
+  margin:
+    0 0 14px;
+
+  color:
+    var(--dusty-purple);
+
+  font-size:
+    0.75rem;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0.18em;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* =========================
+   TIMELINE LIST
+========================= */
+
+.timeline-list {
+  list-style:
+    none;
+
+  margin:
+    0;
+
+  padding:
+    0;
+
+  display:
+    grid;
+
+  gap:
+    10px;
+}
+
+
+/* =========================
+   TIMELINE ITEM
+========================= */
+
+.timeline-item {
+  display:
+    grid;
+
+  grid-template-columns:
+    95px 1fr;
+
+  gap:
+    10px;
+
+  align-items:
+    start;
+}
+
+
+/* =========================
+   TIMELINE TIME
+========================= */
+
+.timeline-time {
+  color:
+    var(--deep-purple);
+
+  font-size:
+    0.84rem;
+
+  font-weight:
+    600;
+
+  line-height:
+    1.5;
+}
+
+
+/* =========================
+   TIMELINE ACTIVITY
+========================= */
+
+.timeline-activity {
+  color:
+    var(--text-dark);
+
+  font-size:
+    0.88rem;
+
+  line-height:
+    1.6;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .details-section {
+    padding:
+      110px 20px 70px;
+  }
+
+
+  .details-title {
+    font-size:
+      2.7rem;
+  }
+
+
+  .event-card {
+    max-width:
+      420px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .details-section {
+    padding:
+      100px 16px 60px;
+  }
+
+
+  .details-container {
+    max-width:
+      100%;
+  }
+
+
+  /* =========================
+     TITLE
+  ========================= */
+
+  .details-title {
+    font-size:
+      2.3rem;
+
+    line-height:
+      1.05;
+
+    margin-bottom:
+      14px;
+  }
+
+
+  /* =========================
+     DATE
+  ========================= */
+
+  .details-date {
+    font-size:
+      0.82rem;
+
+    margin-bottom:
+      30px;
+
+    letter-spacing:
+      0.12em;
+  }
+
+
+  /* =========================
+     EVENT CARD
+  ========================= */
+
+  .event-card {
+    width:
+      100%;
+
+    padding:
+      32px 20px;
+
+    border-radius:
+      22px;
+  }
+
+
+  /* =========================
+     EVENT LABEL
+  ========================= */
+
+  .event-label {
+    font-size:
+      0.65rem;
+
+    letter-spacing:
+      0.2em;
+  }
+
+
+  /* =========================
+     EVENT TIME
+  ========================= */
+
+  .event-time {
+    font-size:
+      1.3rem;
+  }
+
+
+  /* =========================
+     EVENT VENUE
+  ========================= */
+
+  .event-venue {
+    font-size:
+      0.95rem;
+  }
+
+
+  /* =========================
+     EVENT LOCATION
+  ========================= */
+
+  .event-location {
+    gap:
+      9px;
+
+    max-width:
+      300px;
+
+    margin:
+      12px auto 22px;
+  }
+
+
+  /* =========================
+     ADDRESS
+  ========================= */
+
+  .event-location .event-address {
+    font-size:
+      0.72rem;
+
+    line-height:
+      1.6;
+  }
+
+
+  /* =========================
+     GOOGLE MAP ICON
+  ========================= */
+
+  .google-map-icon {
+    width:
+      31px;
+
+    height:
+      31px;
+
+    font-size:
+      0.9rem;
+  }
+
+
+  /* =========================
+     TIMELINE
+  ========================= */
+
+  .event-timeline {
+    margin-top:
+      22px;
+
+    padding-top:
+      18px;
+  }
+
+
+  .timeline-title {
+    font-size:
+      0.68rem;
+  }
+
+
+  .timeline-item {
+    grid-template-columns:
+      82px 1fr;
+
+    gap:
+      8px;
+  }
+
+
+  .timeline-time {
+    font-size:
+      0.78rem;
+  }
+
+
+  .timeline-activity {
+    font-size:
+      0.84rem;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+  .details-section {
+    padding:
+      85px 14px 50px;
+  }
+
+
+  .details-title {
+    font-size:
+      2.1rem;
+  }
+
+
+  .details-date {
+    font-size:
+      0.75rem;
+  }
+
+
+  .event-card {
+    padding:
+      28px 17px;
+
+    border-radius:
+      20px;
+  }
+
+
+  .event-time {
+    font-size:
+      1.2rem;
+  }
+
+
+  .event-location {
+    max-width:
+      270px;
+  }
+
+
+  .event-location .event-address {
+    font-size:
+      0.68rem;
+  }
+
+
+  .timeline-item {
+    grid-template-columns:
+      75px 1fr;
+  }
+
+
+  .timeline-time {
+    font-size:
+      0.73rem;
+  }
+
+
+  .timeline-activity {
+    font-size:
+      0.8rem;
+  }
+
+}

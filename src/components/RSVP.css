@@ -1,0 +1,886 @@
+/* =========================
+   RSVP SECTION
+========================= */
+
+.rsvp-section {
+  position: relative;
+
+  padding: 120px 20px 80px;
+
+  text-align: center;
+
+  background-image:
+    url('../assets/new2.png');
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+
+  isolation: isolate;
+}
+
+
+/* =========================
+   SOFT OVERLAY
+========================= */
+
+.rsvp-section::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.08)
+    );
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.rsvp-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: 90%;
+
+  max-width: 600px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.rsvp-title {
+  margin:
+    0 0 15px;
+
+  color:
+    var(--text-dark);
+
+  font-family:
+    "Cormorant Garamond",
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(2.4rem, 6vw, 3.4rem);
+
+  font-weight:
+    500;
+
+  font-style:
+    italic;
+
+  line-height:
+    1.05;
+
+  letter-spacing:
+    -0.02em;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.rsvp-description {
+  max-width:
+    420px;
+
+  margin:
+    0 auto 25px;
+
+  color:
+    #5c5363;
+
+  font-size:
+    0.88rem;
+
+  line-height:
+    1.8;
+}
+
+
+/* =========================
+   DEADLINE
+========================= */
+
+.rsvp-deadline {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    8px;
+
+  margin-bottom:
+    35px;
+
+  padding:
+    11px 18px;
+
+  background:
+    rgba(255, 255, 255, 0.3);
+
+  border:
+    1px solid
+    rgba(111, 96, 125, 0.2);
+
+  border-radius:
+    999px;
+
+  box-shadow:
+    0 5px 20px
+    rgba(111, 96, 125, 0.05);
+
+  backdrop-filter:
+    blur(5px);
+
+  -webkit-backdrop-filter:
+    blur(5px);
+}
+
+
+/* =========================
+   DEADLINE ICON
+========================= */
+
+.rsvp-deadline span {
+  font-size:
+    0.95rem;
+}
+
+
+/* =========================
+   DEADLINE TEXT
+========================= */
+
+.rsvp-deadline p {
+  margin:
+    0;
+
+  color:
+    var(--deep-purple);
+
+  font-size:
+    0.75rem;
+
+  line-height:
+    1.4;
+}
+
+
+.rsvp-deadline strong {
+  font-weight:
+    600;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.rsvp-form {
+  padding:
+    38px 28px;
+
+  text-align:
+    left;
+
+  background:
+    rgba(255, 255, 255, 0.28);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.55);
+
+  border-radius:
+    24px;
+
+  box-shadow:
+    0 15px 40px
+    rgba(111, 96, 125, 0.1);
+
+  backdrop-filter:
+    blur(5px);
+
+  -webkit-backdrop-filter:
+    blur(5px);
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.rsvp-form-group {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    9px;
+
+  margin-bottom:
+    22px;
+}
+
+
+/* =========================
+   FORM LABEL
+========================= */
+
+.rsvp-form-group > label {
+  color:
+    var(--deep-purple);
+
+  font-size:
+    0.78rem;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0.04em;
+}
+
+
+/* =========================
+   INPUT + SELECT
+========================= */
+
+.rsvp-form input[type="text"],
+.rsvp-form select {
+  width:
+    100%;
+
+  padding:
+    13px 14px;
+
+  box-sizing:
+    border-box;
+
+  border:
+    1px solid
+    rgba(111, 96, 125, 0.2);
+
+  border-radius:
+    12px;
+
+  background:
+    rgba(255, 255, 255, 0.65);
+
+  color:
+    var(--text-dark);
+
+  font-family:
+    inherit;
+
+  font-size:
+    0.85rem;
+
+  outline:
+    none;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+
+/* =========================
+   INPUT FOCUS
+========================= */
+
+.rsvp-form input[type="text"]:focus,
+.rsvp-form select:focus {
+  border-color:
+    var(--dusty-purple);
+
+  background:
+    rgba(255, 255, 255, 0.85);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(111, 96, 125, 0.08);
+}
+
+
+/* =========================
+   ATTENDANCE
+========================= */
+
+.attendance-options {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    9px;
+}
+
+
+.attendance-option {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  cursor:
+    pointer;
+}
+
+
+.attendance-option input {
+  display:
+    none;
+}
+
+
+.attendance-option span {
+  width:
+    100%;
+
+  padding:
+    13px 15px;
+
+  box-sizing:
+    border-box;
+
+  border:
+    1px solid
+    rgba(111, 96, 125, 0.2);
+
+  border-radius:
+    12px;
+
+  background:
+    rgba(255, 255, 255, 0.3);
+
+  color:
+    var(--text-dark);
+
+  font-size:
+    0.83rem;
+
+  line-height:
+    1.4;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================
+   ATTENDANCE HOVER
+========================= */
+
+.attendance-option:hover span {
+  transform:
+    translateY(-1px);
+
+  background:
+    rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================
+   ATTENDANCE ACTIVE
+========================= */
+
+.attendance-option.active span {
+  background:
+    var(--deep-purple);
+
+  color:
+    var(--white);
+
+  border-color:
+    var(--deep-purple);
+
+  box-shadow:
+    0 6px 18px
+    rgba(111, 96, 125, 0.18);
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.rsvp-submit-button {
+  display:
+    block;
+
+  width:
+    100%;
+
+  margin-top:
+    10px;
+
+  padding:
+    14px;
+
+  border:
+    none;
+
+  border-radius:
+    999px;
+
+  background:
+    var(--deep-purple);
+
+  color:
+    var(--white);
+
+  font-family:
+    inherit;
+
+  font-size:
+    0.85rem;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0.05em;
+
+  cursor:
+    pointer;
+
+  box-shadow:
+    0 8px 20px
+    rgba(111, 96, 125, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================
+   SUBMIT HOVER
+========================= */
+
+.rsvp-submit-button:hover {
+  background:
+    var(--dusty-purple);
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 12px 25px
+    rgba(111, 96, 125, 0.22);
+}
+
+
+/* =========================
+   SUBMIT DISABLED
+========================= */
+
+.rsvp-submit-button:disabled {
+  opacity:
+    0.6;
+
+  cursor:
+    not-allowed;
+
+  transform:
+    none;
+
+  box-shadow:
+    none;
+}
+
+
+/* =========================
+   SUCCESS
+========================= */
+
+.rsvp-success {
+  padding:
+    45px 28px;
+
+  text-align:
+    center;
+
+  background:
+    rgba(255, 255, 255, 0.3);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.5);
+
+  border-radius:
+    24px;
+
+  box-shadow:
+    0 15px 40px
+    rgba(111, 96, 125, 0.08);
+
+  backdrop-filter:
+    blur(5px);
+
+  -webkit-backdrop-filter:
+    blur(5px);
+}
+
+
+/* =========================
+   SUCCESS ICON
+========================= */
+
+.success-icon {
+  font-size:
+    2.2rem;
+
+  margin-bottom:
+    15px;
+}
+
+
+/* =========================
+   SUCCESS TITLE
+========================= */
+
+.rsvp-success h3 {
+  margin:
+    0 0 15px;
+
+  color:
+    var(--deep-purple);
+
+  font-family:
+    "Cormorant Garamond",
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size:
+    1.8rem;
+
+  font-weight:
+    500;
+
+  font-style:
+    italic;
+}
+
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.rsvp-success p {
+  margin:
+    0 auto 25px;
+
+  max-width:
+    350px;
+
+  color:
+    var(--text-dark);
+
+  font-size:
+    0.88rem;
+
+  line-height:
+    1.8;
+}
+
+
+/* =========================
+   SUCCESS BUTTON
+========================= */
+
+.rsvp-success button {
+  padding:
+    11px 22px;
+
+  border:
+    none;
+
+  border-radius:
+    999px;
+
+  background:
+    var(--deep-purple);
+
+  color:
+    var(--white);
+
+  font-family:
+    inherit;
+
+  font-size:
+    0.82rem;
+
+  cursor:
+    pointer;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+
+.rsvp-success button:hover {
+  background:
+    var(--dusty-purple);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .rsvp-section {
+    padding:
+      105px 20px 70px;
+  }
+
+
+  .rsvp-title {
+    font-size:
+      2.7rem;
+  }
+
+
+  .rsvp-form {
+    padding:
+      35px 25px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .rsvp-section {
+    padding:
+      60px 10px 60px;
+  }
+
+
+  /* =========================
+     TITLE
+  ========================= */
+
+  .rsvp-title {
+    font-size:
+      2.3rem;
+
+    line-height:
+      1.05;
+
+    margin-bottom:
+      5px;
+  }
+
+
+  /* =========================
+     DESCRIPTION
+  ========================= */
+
+  .rsvp-description {
+    font-size:
+      0.82rem;
+
+    line-height:
+      1.8;
+
+    margin-bottom:
+      22px;
+  }
+
+
+  /* =========================
+     DEADLINE
+  ========================= */
+
+  .rsvp-deadline {
+    padding:
+      10px 15px;
+
+    margin-bottom:
+      28px;
+  }
+
+
+  .rsvp-deadline span {
+    font-size:
+      0.85rem;
+  }
+
+
+  .rsvp-deadline p {
+    font-size:
+      0.7rem;
+  }
+
+
+  /* =========================
+     FORM
+  ========================= */
+
+  .rsvp-form {
+    padding:
+      30px 20px;
+
+    border-radius:
+      20px;
+  }
+
+
+  /* =========================
+     INPUT
+  ========================= */
+
+  .rsvp-form input[type="text"],
+  .rsvp-form select {
+    font-size:
+      0.82rem;
+
+    padding:
+      13px;
+  }
+
+
+  /* =========================
+     ATTENDANCE
+  ========================= */
+
+  .attendance-option span {
+    font-size:
+      0.8rem;
+
+    padding:
+      13px 14px;
+  }
+
+
+  /* =========================
+     SUBMIT
+  ========================= */
+
+  .rsvp-submit-button {
+    padding:
+      13px;
+
+    font-size:
+      0.8rem;
+  }
+
+
+  /* =========================
+     SUCCESS
+  ========================= */
+
+  .rsvp-success {
+    padding:
+      38px 20px;
+
+    border-radius:
+      20px;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+  .rsvp-section {
+    padding:
+      85px 14px 50px;
+  }
+
+
+  .rsvp-title {
+    font-size:
+      2.1rem;
+  }
+
+
+  .rsvp-description {
+    font-size:
+      0.78rem;
+  }
+
+
+  .rsvp-deadline {
+    padding:
+      9px 13px;
+  }
+
+
+  .rsvp-form {
+    padding:
+      27px 17px;
+
+    border-radius:
+      18px;
+  }
+
+
+  .rsvp-form-group {
+    margin-bottom:
+      19px;
+  }
+
+
+  .rsvp-success {
+    padding:
+      32px 17px;
+  }
+
+}

@@ -1,0 +1,1295 @@
+/* ==================================================
+   WISHES SECTION
+================================================== */
+
+.wishes-section {
+  position: relative;
+
+  padding: 120px 20px 80px;
+
+  overflow: hidden;
+
+  background-color:
+    var(--light-lavender);
+
+  background-image:
+    url('../assets/new.png');
+
+  background-size:
+    cover;
+
+  background-position:
+    center;
+
+  background-repeat:
+    no-repeat;
+
+  text-align:
+    center;
+
+  isolation:
+    isolate;
+}
+
+
+/* ==================================================
+   SOFT OVERLAY
+================================================== */
+
+.wishes-section::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  pointer-events:
+    none;
+
+  z-index:
+    1;
+}
+
+
+/* ==================================================
+   CONTAINER
+================================================== */
+
+.wishes-container {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    100%;
+
+  max-width:
+    1200px;
+
+  margin:
+    0 auto;
+}
+
+
+/* ==================================================
+   TITLE
+================================================== */
+
+.wishes-title {
+  margin:
+    0 0 15px;
+
+  color:
+    var(--text-dark);
+
+  font-family:
+    "Cormorant Garamond",
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(2.5rem, 6vw, 3.5rem);
+
+  font-weight:
+    500;
+
+  font-style:
+    italic;
+
+  line-height:
+    1.05;
+
+  letter-spacing:
+    -0.02em;
+}
+
+
+/* ==================================================
+   DESCRIPTION
+================================================== */
+
+.wishes-description {
+  max-width:
+    500px;
+
+  margin:
+    0 auto 25px;
+
+  color:
+    #5c5363;
+
+  font-size:
+    0.9rem;
+
+  line-height:
+    1.8;
+}
+
+
+/* ==================================================
+   LEAVE WISH BUTTON
+================================================== */
+
+.leave-wish-button {
+  padding:
+    13px 28px;
+
+  border:
+    none;
+
+  border-radius:
+    999px;
+
+  background:
+    var(--deep-purple);
+
+  color:
+    var(--white);
+
+  font-family:
+    inherit;
+
+  font-size:
+    0.82rem;
+
+  letter-spacing:
+    0.04em;
+
+  cursor:
+    pointer;
+
+  box-shadow:
+    0 8px 22px
+    rgba(111, 96, 125, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.leave-wish-button:hover {
+  background:
+    var(--dusty-purple);
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 12px 28px
+    rgba(111, 96, 125, 0.25);
+}
+
+
+/* ==================================================
+   HORIZONTAL INFINITE CAROUSEL
+================================================== */
+
+.wish-carousel {
+  position:
+    relative;
+
+  width:
+    100%;
+
+  margin-top:
+    60px;
+
+  overflow:
+    hidden;
+}
+
+
+/* ==================================================
+   CAROUSEL FADE EDGES
+================================================== */
+
+.wish-carousel::before,
+.wish-carousel::after {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  top:
+    0;
+
+  bottom:
+    0;
+
+  width:
+    70px;
+
+  z-index:
+    3;
+
+  pointer-events:
+    none;
+}
+
+
+.wish-carousel::before {
+  left:
+    0;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(245, 241, 247, 0.9),
+      transparent
+    );
+}
+
+
+.wish-carousel::after {
+  right:
+    0;
+
+  background:
+    linear-gradient(
+      to left,
+      rgba(245, 241, 247, 0.9),
+      transparent
+    );
+}
+
+
+/* ==================================================
+   CAROUSEL TRACK
+================================================== */
+
+.wish-carousel-track {
+  display:
+    flex;
+
+  width:
+    max-content;
+
+  gap:
+    24px;
+
+  animation:
+    wish-scroll
+    45s
+    linear
+    infinite;
+
+  will-change:
+    transform;
+}
+
+
+/* ==================================================
+   PAUSE ON HOVER
+================================================== */
+
+.wish-carousel:hover
+.wish-carousel-track {
+  animation-play-state:
+    paused;
+}
+
+
+/* ==================================================
+   CAROUSEL ANIMATION
+================================================== */
+
+@keyframes wish-scroll {
+
+  0% {
+    transform:
+      translateX(0);
+  }
+
+  100% {
+    transform:
+      translateX(
+        calc(-50% - 12px)
+      );
+  }
+
+}
+
+
+/* ==================================================
+   WISH CARD
+================================================== */
+
+.wish-card {
+  flex:
+    0 0 320px;
+
+  min-height:
+    205px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+
+  padding:
+    28px;
+
+  box-sizing:
+    border-box;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.8);
+
+  border-radius:
+    26px;
+
+  background:
+    rgba(255, 255, 255, 0.72);
+
+  text-align:
+    center;
+
+  box-shadow:
+    0 15px 40px
+    rgba(111, 96, 125, 0.12);
+
+  backdrop-filter:
+    blur(5px);
+
+  -webkit-backdrop-filter:
+    blur(5px);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* ==================================================
+   CARD HOVER
+================================================== */
+
+.wish-card:hover {
+  transform:
+    translateY(-6px);
+
+  box-shadow:
+    0 20px 48px
+    rgba(111, 96, 125, 0.18);
+}
+
+
+/* ==================================================
+   FLOWER
+================================================== */
+
+.wish-flower {
+  flex-shrink:
+    0;
+
+  margin-bottom:
+    15px;
+
+  font-size:
+    1.65rem;
+
+  line-height:
+    1;
+}
+
+
+/* ==================================================
+   WISH MESSAGE
+================================================== */
+
+.wish-message {
+  width:
+    100%;
+
+  max-width:
+    270px;
+
+  margin:
+    0;
+
+  color:
+    var(--text-dark);
+
+  font-family:
+    "Cormorant Garamond",
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size:
+    1rem;
+
+  line-height:
+    1.65;
+
+  overflow:
+    hidden;
+
+  display:
+    -webkit-box;
+
+  -webkit-box-orient:
+    vertical;
+
+  -webkit-line-clamp:
+    4;
+
+  line-clamp:
+    4;
+
+  word-break:
+    break-word;
+
+  overflow-wrap:
+    anywhere;
+}
+
+
+/* ==================================================
+   NAME
+================================================== */
+
+.wish-name {
+  flex-shrink:
+    0;
+
+  margin:
+    15px 0 0;
+
+  color:
+    var(--dusty-purple);
+
+  font-size:
+    0.82rem;
+
+  font-style:
+    italic;
+
+  letter-spacing:
+    0.04em;
+}
+
+
+/* ==================================================
+   READ MORE
+================================================== */
+
+.read-more-button {
+  flex-shrink:
+    0;
+
+  margin-top:
+    8px;
+
+  padding:
+    0;
+
+  border:
+    none;
+
+  background:
+    transparent;
+
+  color:
+    var(--dusty-purple);
+
+  font-size:
+    0.78rem;
+
+  font-family:
+    inherit;
+
+  cursor:
+    pointer;
+
+  text-decoration:
+    none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.read-more-button:hover {
+  color:
+    var(--deep-purple);
+
+  transform:
+    translateY(-1px);
+}
+
+
+/* ==================================================
+   NO WISHES
+================================================== */
+
+.no-wishes {
+  width:
+    100%;
+
+  max-width:
+    420px;
+
+  margin:
+    50px auto 0;
+
+  padding:
+    38px 30px;
+
+  box-sizing:
+    border-box;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.7);
+
+  border-radius:
+    24px;
+
+  background:
+    rgba(255, 255, 255, 0.55);
+
+  box-shadow:
+    0 15px 40px
+    rgba(111, 96, 125, 0.08);
+
+  backdrop-filter:
+    blur(5px);
+
+  -webkit-backdrop-filter:
+    blur(5px);
+}
+
+
+.no-wishes-flower {
+  margin-bottom:
+    15px;
+
+  font-size:
+    2rem;
+}
+
+
+.no-wishes p {
+  margin:
+    0;
+
+  color:
+    var(--text-dark);
+
+  font-size:
+    0.88rem;
+
+  line-height:
+    1.7;
+}
+
+
+/* ==================================================
+   FORM OVERLAY
+================================================== */
+
+.wish-form-overlay {
+  position:
+    fixed;
+
+  inset:
+    0;
+
+  z-index:
+    100;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  padding:
+    20px;
+
+  background:
+    rgba(45, 37, 50, 0.45);
+
+  backdrop-filter:
+    blur(7px);
+
+  -webkit-backdrop-filter:
+    blur(7px);
+}
+
+
+/* ==================================================
+   FORM CARD
+================================================== */
+
+.wish-form-card {
+  position:
+    relative;
+
+  width:
+    100%;
+
+  max-width:
+    500px;
+
+  padding:
+    38px 32px;
+
+  box-sizing:
+    border-box;
+
+  background:
+    rgba(255, 255, 255, 0.96);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.9);
+
+  border-radius:
+    26px;
+
+  box-shadow:
+    0 25px 60px
+    rgba(45, 37, 50, 0.25);
+
+  text-align:
+    left;
+}
+
+
+/* ==================================================
+   FORM TITLE
+================================================== */
+
+.wish-form-card h3 {
+  margin:
+    0 0 25px;
+
+  color:
+    var(--deep-purple);
+
+  font-family:
+    "Cormorant Garamond",
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size:
+    1.8rem;
+
+  font-weight:
+    500;
+
+  font-style:
+    italic;
+
+  text-align:
+    center;
+}
+
+
+/* ==================================================
+   CLOSE BUTTON
+================================================== */
+
+.close-button {
+  position:
+    absolute;
+
+  top:
+    14px;
+
+  right:
+    16px;
+
+  width:
+    35px;
+
+  height:
+    35px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border:
+    none;
+
+  border-radius:
+    50%;
+
+  background:
+    rgba(111, 96, 125, 0.06);
+
+  color:
+    var(--deep-purple);
+
+  font-size:
+    1.4rem;
+
+  cursor:
+    pointer;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.close-button:hover {
+  background:
+    rgba(111, 96, 125, 0.12);
+
+  transform:
+    rotate(90deg);
+}
+
+
+/* ==================================================
+   FORM GROUP
+================================================== */
+
+.form-group {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    8px;
+
+  margin-bottom:
+    20px;
+}
+
+
+.form-group label {
+  color:
+    var(--deep-purple);
+
+  font-size:
+    0.78rem;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0.04em;
+}
+
+
+/* ==================================================
+   INPUT + TEXTAREA
+================================================== */
+
+.form-group input,
+.form-group textarea {
+  width:
+    100%;
+
+  padding:
+    13px 15px;
+
+  box-sizing:
+    border-box;
+
+  border:
+    1px solid
+    rgba(111, 96, 125, 0.18);
+
+  border-radius:
+    12px;
+
+  background:
+    #fcfafd;
+
+  color:
+    var(--text-dark);
+
+  outline:
+    none;
+
+  font-family:
+    inherit;
+
+  font-size:
+    0.85rem;
+
+  resize:
+    vertical;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+
+/* ==================================================
+   INPUT FOCUS
+================================================== */
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color:
+    var(--dusty-purple);
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(111, 96, 125, 0.08);
+}
+
+
+/* ==================================================
+   SEND BUTTON
+================================================== */
+
+.send-wish-button {
+  display:
+    block;
+
+  margin:
+    12px auto 0;
+
+  padding:
+    13px 30px;
+
+  border:
+    none;
+
+  border-radius:
+    999px;
+
+  background:
+    var(--deep-purple);
+
+  color:
+    var(--white);
+
+  font-family:
+    inherit;
+
+  font-size:
+    0.82rem;
+
+  letter-spacing:
+    0.04em;
+
+  cursor:
+    pointer;
+
+  box-shadow:
+    0 8px 20px
+    rgba(111, 96, 125, 0.16);
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.send-wish-button:hover {
+  background:
+    var(--dusty-purple);
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 12px 25px
+    rgba(111, 96, 125, 0.22);
+}
+
+
+/* ==================================================
+   READ FULL WISH MODAL
+================================================== */
+
+.read-wish-card {
+  text-align:
+    center;
+
+  max-width:
+    500px;
+}
+
+
+.full-wish-flower {
+  margin-bottom:
+    15px;
+
+  font-size:
+    2.3rem;
+}
+
+
+.full-wish-message {
+  width:
+    100%;
+
+  max-width:
+    400px;
+
+  margin:
+    20px auto;
+
+  color:
+    var(--text-dark);
+
+  font-family:
+    "Cormorant Garamond",
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size:
+    1rem;
+
+  line-height:
+    1.9;
+
+  word-break:
+    break-word;
+
+  overflow-wrap:
+    anywhere;
+}
+
+
+.full-wish-name {
+  margin-top:
+    15px;
+
+  color:
+    var(--dusty-purple);
+
+  font-size:
+    0.85rem;
+
+  font-style:
+    italic;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 800px) {
+
+  .wishes-section {
+    padding:
+      105px 20px 70px;
+  }
+
+
+  .wish-carousel {
+    margin-top:
+      55px;
+  }
+
+
+  .wish-carousel-track {
+    gap:
+      20px;
+
+    animation-duration:
+      40s;
+  }
+
+
+  .wish-card {
+    flex-basis:
+      290px;
+
+    min-height:
+      190px;
+
+    padding:
+      25px;
+  }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 200px) {
+
+  .wishes-section {
+    padding:
+      95px 15px 60px;
+  }
+
+
+  /* TITLE */
+
+  .wishes-title {
+    font-size:
+      2.3rem;
+
+    line-height:
+      1.05;
+  }
+
+
+  /* DESCRIPTION */
+
+  .wishes-description {
+    max-width:
+      330px;
+
+    font-size:
+      0.84rem;
+
+    line-height:
+      1.8;
+  }
+
+
+  /* BUTTON */
+
+  .leave-wish-button {
+    padding:
+      12px 25px;
+
+    font-size:
+      0.8rem;
+  }
+
+
+  /* CAROUSEL */
+
+  .wish-carousel {
+    margin-top:
+      48px;
+  }
+
+
+  .wish-carousel-track {
+    gap:
+      15px;
+
+    animation-duration:
+      32s;
+  }
+
+
+  /* CARD */
+
+  .wish-card {
+    flex-basis:
+      260px;
+
+    min-height:
+      180px;
+
+    padding:
+      24px;
+  }
+
+
+  /* FLOWER */
+
+  .wish-flower {
+    font-size:
+      1.5rem;
+
+    margin-bottom:
+      13px;
+  }
+
+
+  /* MESSAGE */
+
+  .wish-message {
+    max-width:
+      210px;
+
+    font-size:
+      0.9rem;
+
+    line-height:
+      1.65;
+
+    -webkit-line-clamp:
+      3;
+
+    line-clamp:
+      3;
+  }
+
+
+  /* NAME */
+
+  .wish-name {
+    font-size:
+      0.78rem;
+  }
+
+
+  /* READ MORE */
+
+  .read-more-button {
+    font-size:
+      0.76rem;
+  }
+
+
+  /* FORM */
+
+  .wish-form-card {
+    padding:
+      32px 21px;
+
+    border-radius:
+      22px;
+  }
+
+
+  .wish-form-card h3 {
+    font-size:
+      1.6rem;
+  }
+
+
+  /* FULL WISH */
+
+  .full-wish-message {
+    font-size:
+      0.9rem;
+
+    line-height:
+      1.75;
+  }
+
+
+  .full-wish-flower {
+    font-size:
+      2.1rem;
+  }
+
+}
+
+
+/* ==================================================
+   VERY SMALL PHONE
+================================================== */
+
+@media (max-width: 400px) {
+
+  .wishes-section {
+    padding:
+      85px 14px 50px;
+  }
+
+
+  .wishes-title {
+    font-size:
+      2.1rem;
+  }
+
+
+  .wishes-description {
+    font-size:
+      0.8rem;
+  }
+
+
+  .wish-carousel {
+    margin-top:
+      42px;
+  }
+
+
+  .wish-carousel-track {
+    gap:
+      12px;
+
+    animation-duration:
+      28s;
+  }
+
+
+  .wish-card {
+    flex-basis:
+      235px;
+
+    min-height:
+      165px;
+
+    padding:
+      20px;
+  }
+
+
+  .wish-message {
+    max-width:
+      190px;
+
+    font-size:
+      0.85rem;
+  }
+
+
+  .wish-name {
+    margin-top:
+      10px;
+
+    font-size:
+      0.75rem;
+  }
+
+
+  .wish-form-card {
+    padding:
+      28px 17px;
+  }
+
+}
+
+
+/* ==================================================
+   REDUCE MOTION
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .wish-carousel-track {
+    animation:
+      none;
+  }
+
+}
