@@ -262,7 +262,7 @@ const handleOpenInvitation = () => {
           </button>
 
           <p className="opening-hint">
-            Tap to enter our special day
+            Tap to enter our special celebration
           </p>
 
         </div>

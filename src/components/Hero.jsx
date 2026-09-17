@@ -63,10 +63,10 @@ function Hero() {
 
         <p className="hero-message hero-line hero-line-message">
           <span className="hero-message-line">
-            {renderWords('With love and happiness, we invite you', 'message-first', 1.75)}
+            {renderWords('With love and happiness, we invite you to join us', 'message-first', 1.75)}
           </span>
           <span className="hero-message-line">
-            {renderWords('to celebrate this special moment with us.', 'message-second', 2.25)}
+            {renderWords('in celebrating this special moment with us.', 'message-second', 2.25)}
           </span>
         </p>
 

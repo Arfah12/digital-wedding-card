@@ -68,7 +68,32 @@ function Details() {
 
             <ul className="timeline-list">
 
+<li className="timeline-item">
+
+                <span className="timeline-time">
+                  11:00 AM
+                </span>
+
+                <span className="timeline-activity">
+                  Arrival of Groom's Family
+                </span>
+
+              </li>
+
+
               <li className="timeline-item">
+
+                <span className="timeline-time">
+                  11:15 AM
+                </span>
+
+                <span className="timeline-activity">
+                  Welcome & Family Gathering
+                </span>
+
+              </li>
+
+<li className="timeline-item">
 
                 <span className="timeline-time">
                   11:30 AM
@@ -81,18 +106,29 @@ function Details() {
               </li>
 
 
-              <li className="timeline-item">
+<li className="timeline-item">
 
                 <span className="timeline-time">
                   12:00 PM
                 </span>
 
                 <span className="timeline-activity">
-                  Ring Exchange Ceremony
+                  Exchange of Engagement Gifts
                 </span>
 
               </li>
 
+<li className="timeline-item">
+
+                <span className="timeline-time">
+                  12:20 PM
+                </span>
+
+                <span className="timeline-activity">
+                  Exchange of Engagement Rings
+                </span>
+
+              </li>
 
               <li className="timeline-item">
 
@@ -101,7 +137,32 @@ function Details() {
                 </span>
 
                 <span className="timeline-activity">
+                  Photography Session
+                </span>
+
+              </li>
+
+              <li className="timeline-item">
+
+                <span className="timeline-time">
+                  1:00 PM
+                </span>
+
+                <span className="timeline-activity">
                   Lunch
+                </span>
+
+              </li>
+
+
+              <li className="timeline-item">
+
+                <span className="timeline-time">
+                  1:30 PM
+                </span>
+
+                <span className="timeline-activity">
+                  Ceremony Ends
                 </span>
 
               </li>

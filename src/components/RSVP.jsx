@@ -123,7 +123,7 @@ function RSVP() {
           <span>💌</span>
 
           <p>
-            Please RSVP before
+            Please RSVP by
             <strong>
               {' '}5 December 2026
             </strong>
@@ -224,7 +224,7 @@ function RSVP() {
                   />
 
                   <span>
-                    💜 I'll Be There
+                    💜 Yes, I'll Be There
                   </span>
 
                 </label>
@@ -254,7 +254,7 @@ function RSVP() {
                   />
 
                   <span>
-                    🤍 Unable to Attend
+                    🤍 Sorry, I Can't Attend
                   </span>
 
                 </label>

@@ -2,7 +2,7 @@ const weddingData = {
   bride: "Iera",
   groom: "Izz",
 
-engagementDate: "26 December 2026",
+engagementDate: "26.12.2026",
 engagementDateTime: "2026-12-26T10:00:00",
 
   event: {
