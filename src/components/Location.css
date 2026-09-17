@@ -18,7 +18,6 @@
   overflow: hidden;
 
   background-image: url('../assets/new.png');
-
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -26,10 +25,6 @@
   isolation: isolate;
 }
 
-
-/* =========================
-   SOFT OVERLAY
-========================= */
 
 .location-section::before {
   content: "";
@@ -45,18 +40,12 @@
     );
 
   pointer-events: none;
-
   z-index: 1;
 }
 
 
-/* =========================
-   CONTAINER
-========================= */
-
 .location-container {
   position: relative;
-
   z-index: 2;
 
   width: 92%;
@@ -142,45 +131,6 @@
 }
 
 
-.basmalah-text {
-  opacity: 0;
-}
-
-
-.invitation-card-visible .basmalah-text {
-  animation:
-    basmalahReveal
-    4s
-    ease-out
-    both;
-}
-
-
-@keyframes basmalahReveal {
-
-  from {
-    opacity: 0;
-
-    transform:
-      translateY(12px);
-
-    filter:
-      blur(3px);
-  }
-
-  to {
-    opacity: 1;
-
-    transform:
-      translateY(0);
-
-    filter:
-      blur(0);
-  }
-
-}
-
-
 /* =========================
    DRESS CODE PARAGRAPH
 ========================= */
@@ -261,8 +211,8 @@
 ================================================== */
 
 .dress-reference-grid {
-  width: 100%;
-  max-width: 430px;
+  width: 68%;
+  max-width: 210px;
 
   margin: 22px auto 0;
 
@@ -439,6 +389,12 @@
   }
 
 
+  .dress-reference-grid {
+    width: 36%;
+    max-width: 90px;
+  }
+
+
   /* =========================
      BASMALAH
   ========================= */
@@ -502,7 +458,8 @@
   ========================= */
 
   .dress-reference-grid {
-    max-width: 60%;
+    width: 36%;
+    max-width: 160px;
 
     margin-top: 20px;
 

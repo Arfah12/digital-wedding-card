@@ -10,6 +10,7 @@ import {
 } from 'firebase/firestore'
 
 import db from '../firebase/firestore'
+import butterfly from '../assets/butterfly_transparent.gif'
 
 import './Wishes.css'
 
@@ -292,6 +293,11 @@ function Wishes() {
       className="wishes-section"
       id="wishes"
     >
+
+      <div className="section-butterflies" aria-hidden="true">
+        <img src={butterfly} alt="" className="section-butterfly section-butterfly-left" />
+        <img src={butterfly} alt="" className="section-butterfly section-butterfly-right" />
+      </div>
 
       <div className="wishes-container">
 

@@ -1,10 +1,16 @@
 import weddingData from '../data/weddingData'
 import icon from '../assets/icon.png'
+import butterfly from '../assets/butterfly_transparent.gif'
 import './Details.css'
 
 function Details() {
   return (
     <section className="details-section" id="details">
+
+      <div className="section-butterflies" aria-hidden="true">
+        <img src={butterfly} alt="" className="section-butterfly section-butterfly-left" />
+        <img src={butterfly} alt="" className="section-butterfly section-butterfly-right" />
+      </div>
 
       <div className="details-container">
 

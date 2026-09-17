@@ -13,6 +13,7 @@ import {
 
 
 import db from '../firebase/firestore'
+import butterfly from '../assets/butterfly_transparent.gif'
 
 import './Footer.css'
 
@@ -331,7 +332,6 @@ const handleExportWishes = () => {
 
       <footer className="footer">
 
-      
 
         <div className="footer-content">
 

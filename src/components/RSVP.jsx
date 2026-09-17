@@ -7,6 +7,7 @@ import {
 } from 'firebase/firestore'
 
 import db from '../firebase/firestore'
+import butterfly from '../assets/butterfly_transparent.gif'
 
 import './RSVP.css'
 
@@ -92,6 +93,11 @@ function RSVP() {
       className="rsvp-section"
       id="rsvp"
     >
+
+      <div className="section-butterflies" aria-hidden="true">
+        <img src={butterfly} alt="" className="section-butterfly section-butterfly-left" />
+        <img src={butterfly} alt="" className="section-butterfly section-butterfly-right" />
+      </div>
 
       <div className="rsvp-container">
 

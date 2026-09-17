@@ -39,11 +39,13 @@ function App() {
         .countdown-label,
         .details-title,
         .details-date,
+        .event-timeline,
         .event-label,
         .event-time,
         .event-venue,
         .event-address,
         .location-title,
+        .basmalah-text,
         .dress-code-paragraph,
         .dress-code-list li,
         .rsvp-title,
@@ -160,11 +162,11 @@ const handleOpenInvitation = () => {
 
 
   // ==========================================
-  // CREATE 8 BUTTERFLIES
+  // CREATE 10 BUTTERFLIES
   // ==========================================
 
   const gatheringButterflies = Array.from(
-    { length: 8 },
+    { length: 10 },
     (_, index) => index
   )
 

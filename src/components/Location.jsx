@@ -1,10 +1,17 @@
 import './Location.css'
 import dress1 from '../assets/dress1.jpg'
 import dress2 from '../assets/dress2.jpg'
+import butterfly from '../assets/butterfly_transparent.gif'
 
 function Location() {
   return (
     <section className="location-section" id="location">
+
+      <div className="section-butterflies" aria-hidden="true">
+        <img src={butterfly} alt="" className="section-butterfly section-butterfly-left" />
+        <img src={butterfly} alt="" className="section-butterfly section-butterfly-right" />
+      </div>
+
       <div className="location-container">
 
         <p className="section-label">DRESS CODE</p>

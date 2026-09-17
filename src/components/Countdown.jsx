@@ -44,12 +44,6 @@ function Countdown() {
       <div className="countdown-butterfly countdown-butterfly-one">
         <img src={butterfly} alt="" aria-hidden="true" />
       </div>
-      <div className="countdown-butterfly countdown-butterfly-two">
-        <img src={butterfly} alt="" aria-hidden="true" />
-      </div>
-      <div className="countdown-butterfly countdown-butterfly-three">
-        <img src={butterfly} alt="" aria-hidden="true" />
-      </div>
       <div className="countdown-butterfly countdown-butterfly-four">
         <img src={butterfly} alt="" aria-hidden="true" />
       </div>
