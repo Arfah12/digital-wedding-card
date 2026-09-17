@@ -774,7 +774,7 @@ textarea {
 
   user-select: none;
 
-  opacity: 0.82;
+  opacity: 0;
 
   will-change:
     transform,
@@ -782,18 +782,7 @@ textarea {
 
   transition:
     opacity 0.5s ease;
-
-  animation:
-    butterflyFloat
-    11s
-    ease-in-out
-    infinite,
-    butterflyBreathing
-    6s
-    ease-in-out
-    infinite alternate;
 }
-
 
 .opening-butterfly-9,
 .opening-butterfly-10 {
@@ -1143,16 +1132,14 @@ textarea {
     both;
 }
 
-
 /* ==================================================
-   NAMES
+   NAMES - TOP & BOTTOM
 ================================================== */
 
 .opening-names {
   margin: 0;
 
-  color:
-    var(--text-dark);
+  color: var(--text-dark);
 
   font-family:
     'Great Vibes',
@@ -1167,11 +1154,13 @@ textarea {
 
   font-weight: 400;
 
-  line-height:
-    0.95;
+  line-height: 0.98;
 
-  letter-spacing:
-    0.01em;
+  letter-spacing: 0.01em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   animation:
     namesCinematicReveal
@@ -1182,59 +1171,24 @@ textarea {
 }
 
 
-@keyframes namesCinematicReveal {
-
-  0% {
-    opacity: 0;
-
-    transform:
-      translateY(18px)
-      scale(0.96);
-
-    filter:
-      blur(5px);
-
-    letter-spacing:
-      0.04em;
-  }
-
-  100% {
-    opacity: 1;
-
-    transform:
-      translateY(0)
-      scale(1);
-
-    filter:
-      blur(0);
-
-    letter-spacing:
-      0.01em;
-  }
-}
-
+/* & di tengah */
 
 .opening-names span {
-  display: inline-block;
+  display: block;
 
-  margin:
-    0 8px;
+  margin: 8px 0;
 
-  color:
-    var(--dusty-purple);
+  color: var(--dusty-purple);
 
   font-family:
     'Cormorant Garamond',
     serif;
 
-  font-size:
-    0.52em;
+  font-size: 0.38em;
 
-  font-style:
-    italic;
+  font-style: italic;
 
-  vertical-align:
-    middle;
+  line-height: 1;
 
   animation:
     elegantFadeIn
@@ -1243,7 +1197,6 @@ textarea {
     1.2s
     both;
 }
-
 
 /* ==================================================
    DATE
@@ -1733,10 +1686,10 @@ textarea {
 
   .opening-content {
     max-width:
-      300px;
+      250px;
 
     padding:
-      42px 24px 36px;
+      30px 24px 36px;
 
     border-radius:
       26px;
@@ -1796,7 +1749,7 @@ textarea {
 
   .opening-butterfly {
     width:
-      35px;
+      30px;
   }
 }
 
@@ -1848,7 +1801,7 @@ textarea {
 
   .opening-butterfly {
     width:
-      0px;
+      25px;
   }
 }
 

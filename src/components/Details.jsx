@@ -168,17 +168,7 @@ function Details() {
               </li>
 
 
-              <li className="timeline-item">
-
-                <span className="timeline-time">
-                  1:30 PM
-                </span>
-
-                <span className="timeline-activity">
-                  Ceremony Ends
-                </span>
-
-              </li>
+              
 
             </ul>
 

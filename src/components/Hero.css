@@ -296,31 +296,24 @@
 /* =========================
    MESSAGE
 ========================= */
-/* =========================
-   MESSAGE
-========================= */
 
 .hero-message {
-
-  max-width: 650px;
-
-  margin: 25px auto 0;
-
-  color: var(--text-dark);
 
   font-family:
     "Cormorant Garamond",
     Georgia,
     serif;
 
+margin-top: 15px;
+
   font-size:
-    clamp(1.15rem, 1.2vw, 1.45rem);
+    clamp(1rem, 1.2vw, 1.45rem);
 
   font-weight: 400;
 
   font-style: italic;
 
-  line-height: 1.8;
+  line-height: 1.1;
 
   letter-spacing: 0.02em;
 
@@ -500,7 +493,7 @@
 
 .butterfly-two {
 
-  top: 80%;
+  top: 110%;
   right: 90%;
 
   width: 0px;
@@ -519,7 +512,7 @@
 
 .butterfly-three {
 
-  bottom: 5%;
+  bottom: 50%;
   left: 60%;
 
   width: 0px;
@@ -733,7 +726,6 @@
 
 }
 
-
 /* =========================
    MOBILE
 ========================= */
@@ -742,24 +734,19 @@
 
   .hero {
 
-    min-height:
-      80svh;
+    min-height: 80svh;
 
-    padding:
-      95px 20px 50px;
+    padding: 95px 20px 50px;
 
-    background-position:
-      center;
+    background-position: center;
   }
 
 
   .hero-content {
 
-    width:
-      95%;
+    width: 95%;
 
-    transform:
-      translateY(30px);
+    transform: translateY(30px);
   }
 
 
@@ -782,18 +769,23 @@
   }
 
 
+  /* =========================
+     SMALL SUBTITLE
+  ========================= */
+
   .hero-subtitle {
 
-    font-size:
-      0.6rem;
+    font-size: 0.65rem;
 
-    letter-spacing:
-      0.25em;
+    letter-spacing: 0.3em;
 
-    margin-bottom:
-      18px;
+    margin-bottom: 18px;
   }
 
+
+  /* =========================
+     NAMES
+  ========================= */
 
   .hero-title {
 
@@ -804,124 +796,90 @@
         5.5rem
       );
 
-    line-height:
-      0.8;
+    /* JARAK ANTARA IERA & IZZ */
+    line-height: 0.75;
 
-    letter-spacing:
-      0;
-  }
-
-
-  .hero-title > .hero-line-ampersand {
-
-    font-size:
-      0.38em;
-
-    margin:
-      16px 0;
-  }
-
-
-  .hero-date {
-
-    margin-top:
-      32px;
-
-    font-size:
-      0.72rem;
-
-    letter-spacing:
-      0.12em;
-  }
-
-
-.hero-message {
-
-  max-width: 340px;
-
-  margin-top: 20px;
-
-  font-size: 5rem;
-
-  font-weight: 400;
-
-  font-style: italic;
-
-  line-height: 1.7;
-
-  letter-spacing: 0.01em;
-}
-
-  .hero-button {
-
-    margin-top:
-      25px;
-
-    padding:
-      12px 27px;
-
-    font-size:
-      0.7rem;
+    letter-spacing: 0;
   }
 
 
   /* =========================
-     BUTTERFLY POSITIONS
+     AMPERSAND
   ========================= */
 
-  .butterfly-one {
+  .hero-title > .hero-line-ampersand {
 
-    top:
-      7%;
+    font-size: 0.58em;
 
-    left:
-      3%;
-
-    width:
-      38px;
+    /* Jarak atas & bawah & */
+    margin: 22px 0;
   }
 
 
-  .butterfly-two {
+  /* =========================
+     DATE
+  ========================= */
 
-    top:
-      15%;
+  .hero-date {
 
-    right:
-      2%;
+    margin-top: 32px;
 
-    width:
-      35px;
+    font-size: 0.92rem;
+
+    letter-spacing: 0.12em;
   }
 
+
+  /* =========================
+     MESSAGE
+  ========================= */
+
+  .hero-message {
+
+    max-width: 340px;
+
+    margin-top: 15px;
+
+    font-size: 1rem;
+
+    font-weight: 100;
+
+    font-style: italic;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.01em;
+  }
+
+
+  /* =========================
+     BUTTON
+  ========================= */
+
+  .hero-button {
+
+    margin-top: 25px;
+
+    padding: 12px 27px;
+
+    font-size: 0.7rem;
+  }
+
+
+  /* =========================
+     BUTTERFLY
+  ========================= */
 
   .butterfly-three {
 
-    bottom:
-      30%;
+    bottom: 10%;
 
-    left:
-      6%;
+    left: 80%;
 
-    width:
-      35px;
-  }
-
-
-  .butterfly-four {
-
-    right:
-      5%;
-
-    bottom:
-      50%;
-
-    width:
-      45px;
+    width: 35px;
   }
 
 }
-
 
 /* =========================
    SMALL MOBILE
