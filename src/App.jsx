@@ -9,7 +9,7 @@ import Wishes from './components/Wishes'
 import Footer from './components/Footer'
 
 import butterfly from './assets/butterfly_transparent.gif'
-import weddingMusic from './assets/wedding-music.mp3'
+import weddingMusic from './assets/LAGU WEDDING.mp3'
 
 import './App.css'
 
