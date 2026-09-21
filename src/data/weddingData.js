@@ -10,7 +10,7 @@ engagementDateTime: "2026-12-26T10:00:00",
     venue: "Homestay",
   },
 
-  address: "no 123",
+  address: "Homestay D'Laman Tok Miah, Lot 8709, Jalan Sentosa, Taman Sentosa, 34200, Parit Buntar, Perak",
 
   mapsUrl: "https://www.bing.com/maps/directions?ty=0&v=2&sV=1&rtp=%7Epos.5.128546714782715_100.4825668334961__Mydin%2520Mall%2520Parit%2520Buntar_&cp=5.128547%7E100.482567&lvl=16&style=r",
 
