@@ -242,27 +242,32 @@
 /* =========================
    EVENT LOCATION
 ========================= */
-
 .event-location {
-  display:
-    flex;
-
-  align-items:
-    center;
-
-  justify-content:
-    center;
-
-  gap:
-    12px;
-
-  margin:
-    12px auto 25px;
-
-  max-width:
-    340px;
+  text-align: center;
+  margin-top: 20px;
 }
 
+.event-address {
+  line-height: 1.8;
+  margin: 0 0 15px;
+}
+
+.google-map-icon {
+  display: block;
+  width: fit-content;
+  margin: 5px auto 0;
+}
+
+.google-map-icon img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.google-map-icon:hover img {
+  transform: scale(1.1);
+}
 
 /* =========================
    ADDRESS

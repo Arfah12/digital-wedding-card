@@ -34,29 +34,31 @@ function Details() {
           </p>
 
 
-          {/* LOCATION */}
+         {/* LOCATION */}
 
-          <div className="event-location">
+<div className="event-location">
 
-            <p className="event-address">
-              {weddingData.address}
-            </p>
+  <p className="event-address">
+    Homestay D'Laman Tok Miah<br />
+    Lot 8709, Jalan Sentosa<br />
+    Taman Sentosa<br />
+    34200 Parit Buntar, Perak
+  </p>
 
-            <a
-              href={weddingData.mapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="google-map-icon"
-              aria-label="Open location in Google Maps"
-            >
-              <img
-                src={icon}
-                alt="Google Maps"
-              />
-            </a>
+  <a
+    href={weddingData.mapsUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="google-map-icon"
+    aria-label="Open location in Google Maps"
+  >
+    <img
+      src={icon}
+      alt="Google Maps"
+    />
+  </a>
 
-          </div>
-
+</div>
 
           {/* EVENT TIMELINE */}
 
