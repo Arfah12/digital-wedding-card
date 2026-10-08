@@ -17,11 +17,16 @@ function renderWords(text, groupName, startDelay = 0) {
 }
 
 function Hero() {
-
   return (
     <section className="hero">
-      {/* Floating Butterflies */}
+      {/* Falling Snow Effect */}
+      <div className="snow-container">
+        {[...Array(20)].map((_, i) => (
+          <span key={i} className={`snowflake snowflake-${i + 1}`}>❄</span>
+        ))}
+      </div>
 
+      {/* Floating Butterflies */}
       <div className="butterfly butterfly-one">
         <img src={butterfly} alt="" />
       </div>
@@ -38,24 +43,27 @@ function Hero() {
         <img src={butterfly} alt="" />
       </div>
 
-
       {/* Hero Content */}
-
       <div className="hero-content">
 
         <p className="hero-subtitle hero-line hero-line-subtitle">
-          {renderWords('THE  ENGAGEMENT  OF', 'subtitle', 0.2)}
+          {renderWords('THE ENGAGEMENT OF', 'subtitle', 0.2)}
         </p>
 
         <h1 className="hero-title hero-line hero-line-title">
-
           {renderWords(weddingData.bride, 'bride', 0.42)}
 
           <span className="hero-line-ampersand">&</span>
 
           {renderWords(weddingData.groom, 'groom', 0.9)}
-
         </h1>
+
+        {/* Love Divider */}
+        <div className="love-divider">
+          <span></span>
+          <i>❤</i>
+          <span></span>
+        </div>
 
         <p className="hero-date hero-line hero-line-date">
           {renderWords(weddingData.engagementDate, 'date', 1.35)}
@@ -71,7 +79,6 @@ function Hero() {
         </p>
 
       </div>
-
     </section>
   )
 }

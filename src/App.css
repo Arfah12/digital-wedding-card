@@ -1707,13 +1707,13 @@ textarea {
 
   .opening-names {
     font-size:
-      4rem;
+      2.5rem;
   }
 
 
   .opening-names span {
     margin:
-      0 5px;
+      0 8px;
   }
 
 
@@ -1743,7 +1743,7 @@ textarea {
 
   .opening-hint {
     font-size:
-      0.68rem;
+      1.25rem;
   }
 
 

@@ -220,22 +220,17 @@ const handleOpenInvitation = () => {
           </div>
 
           <p className="opening-label">
-            THE ENGAGEMENT OF
+            Can you keep
           </p>
 
           <h1 className="opening-names">
 
-            Iera
+            A Secret?
 
-            <span>&amp;</span>
-
-            Izz
+        
 
           </h1>
 
-          <p className="opening-date">
-            26 · 12 · 2026
-          </p>
 
           <div className="opening-divider">
 
@@ -247,6 +242,10 @@ const handleOpenInvitation = () => {
 
           </div>
 
+          <p className="opening-hint">
+            Guess What?
+          </p>
+<br></br>
           <button
             type="button"
             className="open-invitation-button"
@@ -261,9 +260,6 @@ const handleOpenInvitation = () => {
 
           </button>
 
-          <p className="opening-hint">
-            Tap to enter our special celebration
-          </p>
 
         </div>
 
