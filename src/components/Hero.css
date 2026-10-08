@@ -152,11 +152,21 @@
 
 .love-divider i {
   color: var(--dusty-purple);
-  font-family: 'Cormorant Garamond', Georgia, serif;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
   font-size: 0.9rem;
   font-style: normal;
   line-height: 1;
-  animation: dividerStar 4s ease-in-out infinite;
+
+  animation:
+    dividerStar
+    4s
+    ease-in-out
+    infinite;
 }
 
 
@@ -313,10 +323,22 @@
 .snowflake {
   position: absolute;
   top: -30px;
+
   color: rgba(255, 255, 255, 0.75);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
   font-size: 10px;
+
   opacity: 1;
-  animation: snow-fall linear infinite;
+
+  animation:
+    snow-fall
+    linear
+    infinite;
 }
 
 .snowflake-1  { left: 5%;  animation-duration: 8s;  animation-delay: 0s; }
