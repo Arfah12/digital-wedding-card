@@ -19,13 +19,6 @@ function renderWords(text, groupName, startDelay = 0) {
 function Hero() {
   return (
     <section className="hero">
-      {/* Falling Snow Effect */}
-      <div className="snow-container">
-        {[...Array(20)].map((_, i) => (
-          <span key={i} className={`snowflake snowflake-${i + 1}`}>❄</span>
-        ))}
-      </div>
-
       {/* Floating Butterflies */}
       <div className="butterfly butterfly-one">
         <img src={butterfly} alt="" />
@@ -61,7 +54,7 @@ function Hero() {
         {/* Love Divider */}
         <div className="love-divider">
           <span></span>
-          <i>❤</i>
+          <i>♡</i>
           <span></span>
         </div>
 

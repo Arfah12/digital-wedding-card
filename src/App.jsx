@@ -9,7 +9,7 @@ import Wishes from './components/Wishes'
 import Footer from './components/Footer'
 
 import butterfly from './assets/butterfly_transparent.gif'
-import weddingMusic from './assets/wedding-music.mp3'
+import weddingMusic from './assets/song2.mp3'
 
 import './App.css'
 
@@ -296,20 +296,6 @@ const handleOpenInvitation = () => {
         <Footer />
 
       </main>
-
-      {isOpened && (
-        <div className="global-snow-container" aria-hidden="true">
-          {Array.from({ length: 35 }, (_, index) => index + 1).map((number) => (
-            <span
-              key={number}
-              className={`snowflake snowflake-${number}`}
-            >
-              ❀
-            </span>
-          ))}
-        </div>
-      )}
-
 
       {/* ==========================================
           BACKGROUND MUSIC
