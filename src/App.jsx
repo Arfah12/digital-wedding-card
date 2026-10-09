@@ -256,7 +256,7 @@ const handleOpenInvitation = () => {
               ♡
             </span>
 
-            Open Invitation
+            Tap Here
 
           </button>
 
